@@ -13,7 +13,7 @@
 .slider
 {
     position: relative;
-    height: 35%;
+    height: 30%;
     width: 90%;
     top: 5%;
     left: 0;
@@ -54,6 +54,12 @@
 .slider-pager
 {
     z-index: 999;
+}
+
+.slider-pager-page
+{
+    width: 10px;
+    font-size: 10px;
 }
 
 .card-image {
