@@ -52,7 +52,7 @@ angular.module('starter.controllers', [])
         document.getElementById("event1_time").innerHTML = getUpcomingEventByIdandTime()[2];
         document.getElementById("event1_descr").innerHTML = getUpcomingEventByIdandTime()[1];
 
-
+        getSlider();
     })
 
 
