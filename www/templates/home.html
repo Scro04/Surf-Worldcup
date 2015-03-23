@@ -16,6 +16,7 @@
         </ion-nav-bar>
         <ion-nav-view name="menuContent">
             <ion-content class="content_home">
+                
                     <ion-slide-box on-slide-changed="slideHasChanged($index)">
                         <ion-slide>
                             <div class="box"><img id="image0">
@@ -38,6 +39,56 @@
                             </div>
                         </ion-slide>
                     </ion-slide-box>
+                
+                
+                <div class="row">
+    <div class="col s12 m6">
+            <div class="card grey lighten-4">
+                <div class="card-content black-text upcomingcard " style="padding-top: 1vh;">
+                    <span class="card-title black-text">Upcoming Events</span>
+                    <div id="timeline">
+                        <div id="firstevent" ng-click="openmap(1)">
+                            <i class="mdi-device-access-time timelinetime grey-text darken-2"></i>
+                            <p class="grey-text darken-2" id="event1_time">10.30</p>
+                            <p class="indexeventheader" id="event1_title">Kitesurf Team Contest</p>
+                            <p class="eventcontent grey-text" id="event1_descr">Erlebe den spannenden Wettkampf zwischen den besten Teams der Welt.</p>
+                            <i class="mdi-hardware-keyboard-arrow-down extendarrow"></i>
+                            <div class="mapwrapper">
+                                <img class="mapimage " id="map1" src="img/map.jpg">
+                                <i class="mdi-maps-place mapmarker"></i>
+                
+                </div>
+                        <div id="firstevent" ng-click="openmap(2)">
+                            <i class="mdi-device-access-time timelinetime grey-text darken-2"></i>-                            <p class="grey-text darken-2">22.30</p>
+                         <p class="indexeventheader" id="event2">Opening Party</p>
+                            <p class="eventcontent grey-text">Das Event, dass uns in diese Woche starten l&aumlst.</p>
+                            <i class="mdi-hardware-keyboard-arrow-down extendarrow"></i>
+                            <div class="mapwrapper">
+                                <img class="mapimage " id="map2" src="img/map.jpg">
+                                <i class="mdi-maps-place mapmarker"></i>
+                
+                </div>
+                        
+                    <div id="firstevent" ng-click="openmap(3)">
+                            <i class="mdi-device-access-time timelinetime grey-text darken-2"></i>
+                            <p class="grey-text darken-2">22.30</p>
+                            <p class="indexeventheader" id="event3">Opening Party</p>
+                            <p class="eventcontent grey-text">Das Event, dass uns in diese Woche starten l&aumlst.</p>
+                            <i class="mdi-hardware-keyboard-arrow-down extendarrow"></i>
+                            <div class="mapwrapper">
+                                <img class="mapimage " id="map2" src="img/map.jpg">
+                                <i class="mdi-maps-place mapmarker"></i>
+                </div>
+                    </div>
+                    <a href="#" class="toallevents">Alle Events</a>
+                </div>
+            </div>
+        </div>
+    </div>
+                     </div>
+                     </div>
+                     </div>
+
 
             </ion-content>
         </ion-nav-view>
