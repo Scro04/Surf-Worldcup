@@ -1,0 +1,25 @@
+.content_home {
+    background-image: url(../../img/8722167302_9511b81630_o.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 20%;
+
+}
+
+.box
+{
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    background-color: #f0f0f0;
+}
+
+.box img
+{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+
