@@ -1,20 +1,21 @@
 <link href="templates/css/home.css" rel="stylesheet">
 <script src="../tests/test_home.js"></script>
 <script src="js/functionality.js"></script>
-
+<ion-view view-title="Surf Worldcup 2016">
 <ion-side-menus enable-menu-with-back-views="false">
-    <ion-side-menu-content>
+    <ion-side-menu-content >
 
         <ion-nav-bar class="bar-light">
             <ion-nav-back-button>
+                
             </ion-nav-back-button>
 
-            <ion-nav-buttons side="left">
+            <ion-nav-buttons side="left" >
                 <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
                 </button>
             </ion-nav-buttons>
         </ion-nav-bar>
-        <ion-nav-view name="menuContent">
+        <ion-nav-view name="menuContent"  view-title="Surf Worldcup 2016">
             <ion-content class="content_home">
 
                 <ion-slide-box on-slide-changed="slideHasChanged($index)">
@@ -45,11 +46,11 @@
                     <div class="col s12 m6">
                         <div class="card grey lighten-4">
                             <div class="card-content black-text upcomingcard " style="padding-top: 1vh;">
-                                <span class="card-title black-text">Upcoming Events</span>
+                                <!--<span class="card-title black-text">Upcoming Events</span>-->
                                 <div id="timeline">
                                     <div id="firstevent" ng-click="openmap(1)">
                                         <i class="mdi-device-access-time timelinetime grey-text darken-2"></i>
-                                        <p class="grey-text darken-2" id="event1_time">10.30</p>
+                                        <p class="black-text darken-2" id="event1_time">10.30</p>
                                         <p class="indexeventheader" id="event1_title">Kitesurf Team Contest</p>
                                         <p class="eventcontent grey-text" id="event1_descr">Erlebe den spannenden Wettkampf zwischen den besten Teams der Welt.</p>
                                         <i class="mdi-hardware-keyboard-arrow-down extendarrow"></i>
@@ -60,7 +61,7 @@
                                         </div>
                                         <div id="firstevent" ng-click="openmap(2)">
                                             <i class="mdi-device-access-time timelinetime grey-text darken-2"></i>
-                                            <p class="grey-text darken-2">22.30</p>
+                                            <p class="black-text darken-2">22.30</p>
                                             <p class="indexeventheader" id="event2">Opening Party</p>
                                             <p class="eventcontent grey-text">Das Event, dass uns in diese Woche starten l&aumlst.</p>
                                             <i class="mdi-hardware-keyboard-arrow-down extendarrow"></i>
@@ -72,7 +73,7 @@
 
                                             <div id="firstevent" ng-click="openmap(3)">
                                                 <i class="mdi-device-access-time timelinetime grey-text darken-2"></i>
-                                                <p class="grey-text darken-2">22.30</p>
+                                                <p class="black-text darken-2">22.30</p>
                                                 <p class="indexeventheader" id="event3">Opening Party</p>
                                                 <p class="eventcontent grey-text">Das Event, dass uns in diese Woche starten l&aumlst.</p>
                                                 <i class="mdi-hardware-keyboard-arrow-down extendarrow"></i>
@@ -81,7 +82,7 @@
                                                     <i class="mdi-maps-place mapmarker"></i>
                                                 </div>
                                             </div>
-                                            <a href="#" class="toallevents">Alle Events</a>
+                                            <!--<a href="#" class="toallevents">Alle Events</a>-->
                                         </div>
                                     </div>
                                 </div>
