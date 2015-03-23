@@ -43,27 +43,43 @@ angular.module('starter.controllers', [])
     }
 })
 
-.controller('homeCtrl', function ($scope) {
+.controller('homeCtrl', function ($scope, $state) {
 
-        $scope.openmap = function (index) {
-            //alert("goes");
-            element = "map" + index;
-            var image = document.getElementById(element);
-            if (image.style.maxHeight == "500px") {
-                image.style.maxHeight = '0px';
-            } else {
-                image.style.maxHeight = '500px';
-            }
+
+    $scope.$watch('$viewContentLoaded', function () {
+
+        document.getElementById("event1_title").innerHTML = getUpcomingEventByIdandTime()[0];
+        document.getElementById("event1_time").innerHTML = getUpcomingEventByIdandTime()[2];
+        document.getElementById("event1_descr").innerHTML = getUpcomingEventByIdandTime()[1];
+
+
+    })
+
+
+
+    $scope.openmap = function (index) {
+
+
+        element = "map" + index;
+        var image = document.getElementById(element);
+
+        if (image.style.maxHeight == "500px") {
+            image.style.maxHeight = '0px';
+        } else {
+            image.style.maxHeight = '500px';
         }
-    })
-    .controller('eventsCtrl', function ($scope) {
+    }
+})
 
 
-    })
+.controller('eventsCtrl', function ($scope) {
+
+
+})
 
 
 function appController($scope, $ionicSideMenuDelegate) {
-  $scope.toggleLeftSideMenu = function() {
-    $ionicSideMenuDelegate.toggleLeft();
-  };
+    $scope.toggleLeftSideMenu = function () {
+        $ionicSideMenuDelegate.toggleLeft();
+    };
 };

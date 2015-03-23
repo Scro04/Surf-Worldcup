@@ -7,9 +7,9 @@ var test_set2 = "Heineken Trink 3 Zahl 1!";
 var test_auhtor2 = "Heineken Bar";
 var test_time2 = "14:20";
 
-var test_set3 = "Heineken Trink 4 Zahl 1!";
-var test_auhtor3 = "Heineken Bar";
-var test_time3 = "16:20";
+var test_set3 = "DESPERADOS JUHU!";
+var test_auhtor3 = "Komm vorbei und sauf dich frei!";
+var test_time3 = "13:20";
 
 var test_set4 = "Heineken Trink 5 Zahl 1!";
 var test_auhtor4 = "Heineken Bar";
@@ -36,9 +36,9 @@ function getUpcomingEventByIdandTime() {
     var current_hour;
     var current_minutes;
     var result_event = null;
-    var compare_minutes = 100;
-    var compare_hour = 100;
-
+     var compare_minutes = 100;
+     var compare_hour = 100;
+    
     try {
         var currentdate = new Date();
         current_hour = currentdate.getHours();
@@ -56,7 +56,8 @@ function getUpcomingEventByIdandTime() {
         {
             if (dataSet_[x][2].split(":")[0] <= compare_hour) 
             {
-                if (dataSet_[x][2].split(":")[0] < compare_hour && dataSet_[x][2].split(":")[1] >= current_minutes) 
+                
+                if (dataSet_[x][2].split(":")[0] < compare_hour) 
                 {
                     compare_hour = dataSet_[x][2].split(":")[0];
                     compare_minutes = dataSet_[x][2].split(":")[1];
@@ -76,7 +77,8 @@ function getUpcomingEventByIdandTime() {
 
     //somehow we need to find the next events coming up? :D
     if(result_event != null)
-    {return dataSet_[result_event];}
+    {
+        return dataSet_[result_event];}
     else{return null;}
     
    
