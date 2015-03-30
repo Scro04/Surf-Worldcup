@@ -9,10 +9,12 @@
 
 }
 
+.bar-light {
+ z-index: 999;   
+}
 .slider
 {
     position: relative;
-
     height: 25%;
     width: 90%;
     top: 5%;
@@ -111,14 +113,7 @@
     padding-right: auto;
 }
 
-.mapimage {
-    max-height: 0;
-	overflow: hidden;
-    padding-right: 100%;
-    -webkit-transition: max-height 0.8s;
-    -moz-transition: max-height 0.8s;
-    transition: max-height 0.8s;
-}
+
 
 .img-fade-in {
     display: inherit;
@@ -134,7 +129,11 @@ position: absolute;
 .row {
 
     padding-top: 15%;
-    opacity: 0.94;
+    opacity: 0.96;
 
     
+}
+.mainnavview
+{
+ margin-top: 8%;
 }

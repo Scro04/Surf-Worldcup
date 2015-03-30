@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'starter.controllers'])
 
 .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -30,7 +30,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     $stateProvider
 
     // setup an abstract state for the tabs directive
-        .state('home', {
+    .state('home', {
         url: '/home',
         templateUrl: 'templates/home.html',
         controller: 'homeCtrl'
@@ -39,9 +39,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     // Each tab has its own nav history stack:
 
     .state('events', {
-        url: '/events',
-        templateUrl: 'templates/events.html',
-        controller: 'eventsCtrl'
+            url: '/events',
+            templateUrl: 'templates/events.html',
+            controller: 'eventsCtrl'
+    })
+    .state('sponsors', {
+        url: '/sponsors',
+        templateUrl: 'templates/sponsors.html',
+        controller: 'sponsorsCtrl'
     });
 
     // if none of the above states are matched, use this as the fallback
