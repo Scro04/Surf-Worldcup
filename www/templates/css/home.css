@@ -1,0 +1,8 @@
+.mapimage {
+    max-height: 0;
+	overflow: hidden;
+    padding-right: 100%;
+    -webkit-transition: max-height 0.8s;
+    -moz-transition: max-height 0.8s;
+    transition: max-height 0.8s;
+}
