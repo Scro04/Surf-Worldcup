@@ -89,7 +89,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('teamCtrl', function ($scope) {
-
+  
 })
 
 .controller('pwaCtrl', function ($scope) {
@@ -97,10 +97,6 @@ angular.module('starter.controllers', [])
 })
 
 .controller('towinCtrl', function ($scope) {
-
-})
-
-.controller('comp_backCtrl', function ($scope) {
 
 });
 

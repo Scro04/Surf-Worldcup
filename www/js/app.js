@@ -70,13 +70,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         url: '/towin',
         templateUrl: 'templates/comp_towin.html',
         controller: 'towinCtrl'
-    })
-    .state('comp_back',{
-        url: '/comp_back',
-        templateUrl: 'templates/competition.html',
-        controller: 'comp_backCtrl'
     });
-    
+
 
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/home');
