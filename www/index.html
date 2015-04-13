@@ -6,6 +6,8 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
 
+	    <script type="text/javascript" src="externalres/jquery2.1.1.js"></script>
+
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="externalres/materialize.min.css" media="screen,projection" />
     <link href="css/style.css" rel="stylesheet">
@@ -13,10 +15,17 @@
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
-
+    <script type="text/javascript" src="externalres/materialize.min.js"></script>
+  	<script src="lib/ionic/js/ionic.bundle.js"></script>
+	
+	<script type="text/javascript"> 
+  	 dataSet_ = []; 
+	</script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/functionality.js"></script>
+	
     <!-- ionic/angularjs js -->
-    <script src="lib/ionic/js/ionic.bundle.js"></script>
-    <script src="js/functionality.js"></script>
+  
 
     <!-- cordova script (this will be a 404 during development) -->
     <!--<script src="cordova.js"></script>-->
@@ -24,12 +33,8 @@
     <!-- your app's js -->
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
-    <script src="js/services.js"></script>
-    <script type="text/javascript" src="externalres/jquery2.1.1.js"></script>
-    <script type="text/javascript" src="externalres/materialize.min.js"></script>
-    <script src="../tests/test_home.js"></script>
-    <script src="js/functionality.js"></script>
-
+	
+	
 
 </head>
 
@@ -76,6 +81,9 @@
                         </ion-item>
                         <ion-item nav-clear menu-close href="#/sponsors">
                             Sponsors
+                        </ion-item>
+                         <ion-item nav-clear menu-close href="#/side_events_main">
+                            Side Events
                         </ion-item>
                     </ion-list>
                 </ion-content>

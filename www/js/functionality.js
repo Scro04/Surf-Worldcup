@@ -1,37 +1,9 @@
-//TEST VARIABLES
-var test_set1 = "Heineken Trink 2 Zahl 1!";
-var test_auhtor1 = "Heineken Bar";
-var test_time1 = "19:00";
-
-var test_set2 = "Heineken Trink 3 Zahl 1!";
-var test_auhtor2 = "Heineken Bar";
-var test_time2 = "14:20";
-
-var test_set3 = "DESPERADOS JUHU!";
-var test_auhtor3 = "Komm vorbei und sauf dich frei!";
-var test_time3 = "13:20";
-
-var test_set4 = "Heineken Trink 5 Zahl 1!";
-var test_auhtor4 = "Heineken Bar";
-var test_time4 = "15:32";
-
-
-var test_set5 = "Heineken Trink 6 Zahl 1!";
-var test_auhtor5 = "Heineken Bar";
-var test_time5 = "16:59";
-
-var data_set_1 = [test_set1, test_auhtor1, test_time1];
-var data_set_2 = [test_set2, test_auhtor2, test_time2];
-var data_set_3 = [test_set3, test_auhtor3, test_time3];
-var data_set_4 = [test_set4, test_auhtor4, test_time4];
-var data_set_5 = [test_set5, test_auhtor5, test_time5];
-
-var dataSet_ = [data_set_1, data_set_2, data_set_3, data_set_4, data_set_5];
+//eventname, veranstalter, uhrzeit
 
 
 //---------------
 
-function getUpcomingEventByIdandTime() {
+function getUpcomingEventByIdandTime(category) {
 
     var current_hour;
     var current_minutes;
@@ -50,13 +22,14 @@ function getUpcomingEventByIdandTime() {
         return "Exception occured";
     }
 
-    for (var x = 0; x < dataSet_.length; x++) {
+    console.log(dataSet_.length);
+    for (var x = 0; x < dataSet_.length; x++) 
+    {
         //Check for events in the upcoming hour
-        if (dataSet_[x][2].split(":")[0] >= current_hour) 
+        if (dataSet_[x][4] == category && dataSet_[x][2].split(":")[0] >= current_hour) 
         {
             if (dataSet_[x][2].split(":")[0] <= compare_hour) 
             {
-                
                 if (dataSet_[x][2].split(":")[0] < compare_hour) 
                 {
                     compare_hour = dataSet_[x][2].split(":")[0];
@@ -73,6 +46,12 @@ function getUpcomingEventByIdandTime() {
                 }
             }
         }
+		else if(dataSet_[x][4] == category && dataSet_[x][3].split(":")[0] >= current_hour)
+		{
+			compare_hour = dataSet_[x][2].split(":")[0];
+                    compare_minutes = dataSet_[x][2].split(":")[1];
+                    result_event = x;
+		}
     }
 
     //somehow we need to find the next events coming up? :D
@@ -80,8 +59,6 @@ function getUpcomingEventByIdandTime() {
     {
         return dataSet_[result_event];}
     else{return null;}
-    
-   
 }
 
 
@@ -120,7 +97,5 @@ function getSlider() {
         final_data.push(element);
         
     }
-
-    console.log(final_data);
     return final_data;
 };

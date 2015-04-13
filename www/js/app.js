@@ -55,6 +55,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       url: '/competition',
       templateUrl: 'templates/comp_tabs.html',
     })
+
     .state('competition.pwa', {
       url: '/pwa',
       views: {
@@ -63,6 +64,13 @@ angular.module('starter', ['ionic', 'starter.controllers'])
           controller: 'pwaCtrl'
         }
       }
+  
+    
+    // Competition States
+    .state('team',{
+        url: '/team',
+        templateUrl: 'templates/comp_team.html',
+        controller: 'teamCtrl'
     })
     .state('competition.team', {
       url: '/team',
@@ -81,8 +89,13 @@ angular.module('starter', ['ionic', 'starter.controllers'])
           controller: 'towinCtrl'
         }
       }
-    });
+    })
 
+   .state('side_events', {
+        url: '/side_events_main',
+        templateUrl: 'templates/side_events_main.html',
+        controller: 'sideEventsCtrl'
+    });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/home');

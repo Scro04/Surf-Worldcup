@@ -51,9 +51,33 @@ angular.module('starter.controllers', [])
     $scope.$watch('$viewContentLoaded', function () {
 
         getSlider();
-        document.getElementById("event1_title").innerHTML = getUpcomingEventByIdandTime()[0];
-        document.getElementById("event1_time").innerHTML = getUpcomingEventByIdandTime()[2];
-        document.getElementById("event1_descr").innerHTML = getUpcomingEventByIdandTime()[1];
+		getDataSet(function()
+		{
+			console.log("Data loaded");
+			var data = getUpcomingEventByIdandTime("Sport");
+			var data2 = getUpcomingEventByIdandTime("SideEvent");
+			var data3 = getUpcomingEventByIdandTime("Party");
+			if(data != null && data.length > 0)
+			{
+				document.getElementById("event1_title").innerHTML = data[0];
+        		document.getElementById("event1_time").innerHTML = data[2] + " - " + data[3];
+        		document.getElementById("event1_descr").innerHTML = data[1];
+			}
+			if(data2 != null && data2.length > 0)
+			{
+				document.getElementById("event2_title").innerHTML = data2[0];
+        		document.getElementById("event2_time").innerHTML = data2[2] + " - " + data2[3];
+        		document.getElementById("event2_descr").innerHTML = data2[1];
+			}
+			if(data3 != null && data3.length > 0)
+			{
+				document.getElementById("event3_title").innerHTML = data3[0];
+        		document.getElementById("event3_time").innerHTML = data3[2] + " - " + data3[3];
+        		document.getElementById("event3_descr").innerHTML = data3[1];
+			}
+		})
+
+		
 
     })
     $scope.openmap = function (index) {
@@ -76,6 +100,11 @@ angular.module('starter.controllers', [])
 
 })
 .controller('sponsorsCtrl', function ($scope) {
+
+
+})
+
+.controller('sideEventsCtrl', function ($scope) {
 
 
 })

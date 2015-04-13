@@ -1,0 +1,45 @@
+.content_event {
+    position: fixed;
+    background-image: url(../../img/8722167302_9511b81630_o.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    width: auto;
+}
+
+.list {
+    margin-top: 15%;
+    height: 80%;
+    width: auto;
+}
+
+#list_item {
+    height: 20%;
+    width: auto;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+#list_item a {
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 15%;
+    font-size: 35px;
+}
+
+#list_item span {
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    font-size: 25px;
+}
+
+#list_item:hover {
+    background-color: rgb(211, 211, 211);
+}
