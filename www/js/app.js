@@ -47,7 +47,31 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         url: '/sponsors',
         templateUrl: 'templates/sponsors.html',
         controller: 'sponsorsCtrl'
+    })
+    .state('competition',{
+        url: '/competition',
+        templateUrl: 'templates/competition.html',
+        controller: 'competitionCtrl'
+    })
+    
+    
+    // Competition States
+    .state('team',{
+        url: '/team',
+        templateUrl: 'templates/comp_team.html',
+        controller: 'teamCtrl'
+    })
+    .state('pwa',{
+        url: '/pwa',
+        templateUrl: 'templates/comp_pwa.html',
+        controller: 'pwaCtrl'
+    })
+    .state('towin',{
+        url: '/towin',
+        templateUrl: 'templates/comp_towin.html',
+        controller: 'towinCtrl'
     });
+
 
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/home');

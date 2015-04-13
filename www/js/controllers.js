@@ -78,6 +78,26 @@ angular.module('starter.controllers', [])
 .controller('sponsorsCtrl', function ($scope) {
 
 
+})
+
+
+
+//Competition Controller
+.controller('competitionCtrl', function ($scope) {
+
+
+})
+
+.controller('teamCtrl', function ($scope) {
+  
+})
+
+.controller('pwaCtrl', function ($scope) {
+
+})
+
+.controller('towinCtrl', function ($scope) {
+
 });
 
 
