@@ -1,6 +1,11 @@
 <link href="templates/css/competition.css" rel="stylesheet">
 
 <ion-content class="content_comp">
+  <ion-tabs class="tabs-positive">
+      <ion-tab title="Team" ui-sref="team"></ion-tab>
+      <ion-tab title="PWA"  ui-sref="pwa"></ion-tab>
+      <ion-tab title="TOW-IN EM" ui-sref="towin"></ion-tab>
+  </ion-tabs>
   
 <div class="card">
   <div class="item item-divider">
@@ -17,8 +22,9 @@
     </p>
   </div>
 </div>
-<button class="button_rider_on" onclick="document.getElementById('rider').style.display='block';" alt="" border="" />Zu den Ridern</button>
-  
+
+<button id="rider_button" class="rider_button" ng-click="opendiv()">Show Rider</button>
+
 <div class="rider" id="rider">
 
 <div class="item item-avatar">
@@ -34,11 +40,9 @@
   
   <div class="item item-avatar">
     <img src="img/fritz.jpg">
-    <h2>Fritz Phandom</h2>
+    <h2>Fritz Phantom</h2>
     <p>Juli 15, 1990</p>
   </div>
-  
-<button class="button_rider_off" onclick="document.getElementById('rider').style.display='none';" alt="" border="" />ausblenden</button>
 </div>
   
 </ion-content>
