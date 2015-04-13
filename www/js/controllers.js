@@ -41,24 +41,21 @@ angular.module('starter.controllers', [])
             }
         }
     }
+
+
+    
 })
 
 .controller('homeCtrl', function ($scope, $state) {
 
-
     $scope.$watch('$viewContentLoaded', function () {
 
+        getSlider();
         document.getElementById("event1_title").innerHTML = getUpcomingEventByIdandTime()[0];
         document.getElementById("event1_time").innerHTML = getUpcomingEventByIdandTime()[2];
         document.getElementById("event1_descr").innerHTML = getUpcomingEventByIdandTime()[1];
 
-
-        getSlider();
-
     })
-
-
-
     $scope.openmap = function (index) {
 
 
@@ -71,13 +68,17 @@ angular.module('starter.controllers', [])
             image.style.maxHeight = '500px';
         }
     }
-})
 
+})
 
 .controller('eventsCtrl', function ($scope) {
 
 
 })
+.controller('sponsorsCtrl', function ($scope) {
+
+
+});
 
 
 function appController($scope, $ionicSideMenuDelegate) {

@@ -9,7 +9,7 @@
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="externalres/materialize.min.css" media="screen,projection" />
     <link href="css/style.css" rel="stylesheet">
-
+    <link href="templates/css/index.css" rel="stylesheet">
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
@@ -27,15 +27,71 @@
     <script src="js/services.js"></script>
     <script type="text/javascript" src="externalres/jquery2.1.1.js"></script>
     <script type="text/javascript" src="externalres/materialize.min.js"></script>
-    
+    <script src="../tests/test_home.js"></script>
+    <script src="js/functionality.js"></script>
+
 
 </head>
 
 <body ng-app="starter" ng-controller="appController as appCtrl">
-   
-    <ion-nav-view>
-    </ion-nav-view>
-    
+    <ion-side-menus>
+        <ion-view view-title="Surf Worldcup 2016">
+            <!-- Header Bar --> 
+            <ion-nav-bar class="bar-light">
+                <ion-nav-back-button>
+
+                </ion-nav-back-button>
+
+                <ion-nav-buttons side="left">
+                    <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                    </button>
+                </ion-nav-buttons>
+                <ion-nav-buttons side="right">
+                    <button class="button button-icon button-clear ion-person">
+                    </button>
+                </ion-nav-buttons>
+            </ion-nav-bar>
+            <!-- --> 
+            <ion-side-menu side="left">
+                <ion-header-bar class="bar-stable">
+                    <h1 class="title">Hauptmenü</h1>
+                </ion-header-bar>
+                <ion-content>
+                    <!-- Navbar! link correlates to state -- Controller assigned automatically -->
+                    <ion-list>
+                        <ion-item nav-clear menu-close href="#/home">
+                            Home
+                        </ion-item>
+                        <ion-item nav-clear menu-close href="#/events">
+                            Events
+                        </ion-item>
+                        <ion-item nav-clear menu-close href="#/search">
+                            Search
+                        </ion-item>
+                        <ion-item nav-clear menu-close href="#/browse">
+                            Browse
+                        </ion-item>
+                        <ion-item nav-clear menu-close href="#/playlists">
+                            Playlists
+                        </ion-item>
+                        <ion-item nav-clear menu-close href="#/sponsors">
+                            Sponsors
+                        </ion-item>
+                    </ion-list>
+                </ion-content>
+            </ion-side-menu>
+            
+            <ion-side-menu-content>
+                
+                <!-- template content is gonna be pushed in following directive --> 
+                <ion-nav-view class="mainnavview" >
+
+                </ion-nav-view>
+                <!-- End of pushed content --> 
+            </ion-side-menu-content>
+            
+        </ion-view>
+    </ion-side-menus>
 </body>
 
 </html>
