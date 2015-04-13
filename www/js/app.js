@@ -8,67 +8,83 @@
 angular.module('starter', ['ionic', 'starter.controllers'])
 
 .run(function ($ionicPlatform) {
-    $ionicPlatform.ready(function () {
-        // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-        // for form inputs)
-        if (window.cordova && window.cordova.plugins.Keyboard) {
-            cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-        }
-        if (window.StatusBar) {
-            // org.apache.cordova.statusbar required
-            StatusBar.styleDefault();
-        }
-    });
+  $ionicPlatform.ready(function () {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+    if (window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
+    if (window.StatusBar) {
+      // org.apache.cordova.statusbar required
+      StatusBar.styleDefault();
+    }
+  });
 })
 
 .config(function ($stateProvider, $urlRouterProvider) {
 
-    // Ionic uses AngularUI Router which uses the concept of states
-    // Learn more here: https://github.com/angular-ui/ui-router
-    // Set up the various states which the app can be in.
-    // Each state's controller can be found in controllers.js
-    $stateProvider
+  // Ionic uses AngularUI Router which uses the concept of states
+  // Learn more here: https://github.com/angular-ui/ui-router
+  // Set up the various states which the app can be in.
+  // Each state's controller can be found in controllers.js
+  $stateProvider
 
-    // setup an abstract state for the tabs directive
+  // setup an abstract state for the tabs directive
     .state('home', {
-        url: '/home',
-        templateUrl: 'templates/home.html',
-        controller: 'homeCtrl'
-    })
+    url: '/home',
+    templateUrl: 'templates/home.html',
+    controller: 'homeCtrl'
+  })
 
-    // Each tab has its own nav history stack:
+  // Each tab has its own nav history stack:
 
-    .state('events', {
-            url: '/events',
-            templateUrl: 'templates/events.html',
-            controller: 'eventsCtrl'
+  .state('events', {
+      url: '/events',
+      templateUrl: 'templates/events.html',
+      controller: 'eventsCtrl'
     })
     .state('sponsors', {
-        url: '/sponsors',
-        templateUrl: 'templates/sponsors.html',
-        controller: 'sponsorsCtrl'
+      url: '/sponsors',
+      templateUrl: 'templates/sponsors.html',
+      controller: 'sponsorsCtrl'
     })
-  
-    
-    // Competition States
-    .state('team',{
-        url: '/team',
-        templateUrl: 'templates/comp_team.html',
-        controller: 'teamCtrl'
+
+
+  // Competition States
+  .state('competition', {
+      url: '/competition',
+      templateUrl: 'templates/comp_tabs.html',
     })
-    .state('pwa',{
-        url: '/pwa',
-        templateUrl: 'templates/comp_pwa.html',
-        controller: 'pwaCtrl'
+    .state('competition.pwa', {
+      url: '/pwa',
+      views: {
+        'pwa': {
+          templateUrl: "templates/comp_pwa.html",
+          controller: 'pwaCtrl'
+        }
+      }
     })
-    .state('towin',{
-        url: '/towin',
-        templateUrl: 'templates/comp_towin.html',
-        controller: 'towinCtrl'
+    .state('competition.team', {
+      url: '/team',
+      views: {
+        'team': {
+          templateUrl: "templates/comp_team.html",
+          controller: 'teamCtrl'
+        }
+      }
+    })
+    .state('competition.towin', {
+      url: '/towin',
+      views: {
+        'towin': {
+          templateUrl: "templates/comp_towin.html",
+          controller: 'towinCtrl'
+        }
+      }
     });
 
 
-    // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/home');
+  // if none of the above states are matched, use this as the fallback
+  $urlRouterProvider.otherwise('/home');
 
 });
