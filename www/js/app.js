@@ -48,12 +48,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         templateUrl: 'templates/sponsors.html',
         controller: 'sponsorsCtrl'
     })
-    .state('competition',{
-        url: '/competition',
-        templateUrl: 'templates/competition.html',
-        controller: 'competitionCtrl'
-    })
-    
+  
     
     // Competition States
     .state('team',{
