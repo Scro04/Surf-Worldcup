@@ -104,6 +104,11 @@ angular.module('starter.controllers', [])
 
 })
 
+.controller('sideEventsCtrl', function ($scope) {
+
+
+})
+
 
 
 //Competition Controller
