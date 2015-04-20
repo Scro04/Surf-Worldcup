@@ -138,32 +138,44 @@ angular.module('starter.controllers', [])
 
 })
 
-
 //Competition Controller
-.controller('teamCtrl', function ($scope) {
-  //Function to show the Riders
-
-  var button = document.getElementById('rider_button');  
+.controller('compCtrl', function ($scope) {
+ 
+  var table_size = document.getElementById('table').rows.length;
   
-  $(document).ready(function () {
-  $('#rider_button').click(function () {
-    $('.rider').slideToggle("fast");
-    if (button.innerHTML == "Show Rider") {
-      button.innerHTML = "Hide Rider";
-    } else {
-      button.innerHTML = "Show Rider";
+  for(var i = 0 ; i < table_size; i++)
+  {
+    start_time_el = "start_time" + i;
+    var start_time = document.getElementById(start_time_el).innerHTML;
+
+    end_time_el = "end_time" + i;
+    var end_time = document.getElementById(end_time_el).innerHTML;
+
+    date_el = "date" + i; 
+    var date = document.getElementById(date_el).innerHTML;
+
+    var status = isEventAtTime(start_time, end_time, date);
+
+    event_el = "event"+i;
+
+    if(status == "prev")
+    {
+      document.getElementById(event_el).className = "prev";
     }
-  });
-  });
-  })
-.controller('pwaCtrl', function ($scope) {
-
+    else if (status == "now")
+    {
+      document.getElementById(event_el).className = "now";
+    }
+    else if(status == "later")
+    {
+      document.getElementById(event_el).className = "later";
+    }
+    else
+    {
+      document.getElementById(event_el).className = "fail";
+    }
+  }
 })
-
-.controller('towinCtrl', function ($scope) {
-
-});
-
 
 function appController($scope, $ionicSideMenuDelegate) {
     $scope.toggleLeftSideMenu = function () {
