@@ -118,17 +118,16 @@ angular.module('starter.controllers', [])
   var button = document.getElementById('rider_button');  
   
   $(document).ready(function () {
-    $('#rider_button').click(function () {
-        $('.rider').slideToggle("fast");
-        if (button.innerHTML == "Show Rider") {
-          button.innerHTML = "Hide Rider";
-        } else {
-          button.innerHTML = "Show Rider";
-        }
-    });
+  $('#rider_button').click(function () {
+    $('.rider').slideToggle("fast");
+    if (button.innerHTML == "Show Rider") {
+      button.innerHTML = "Hide Rider";
+    } else {
+      button.innerHTML = "Show Rider";
+    }
   });
-})
-
+  });
+  })
 .controller('pwaCtrl', function ($scope) {
 
 })

@@ -64,14 +64,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
           controller: 'pwaCtrl'
         }
       }
+  })
   
-    
-    // Competition States
-    .state('team',{
-        url: '/team',
-        templateUrl: 'templates/comp_team.html',
-        controller: 'teamCtrl'
-    })
     .state('competition.team', {
       url: '/team',
       views: {
