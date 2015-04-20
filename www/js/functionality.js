@@ -99,3 +99,51 @@ function getSlider() {
     }
     return final_data;
 };
+
+
+function isEventAtTime(start_time, end_time, date) {
+  
+   try {
+        var currentdate = new Date();
+        var current_hour = currentdate.getHours();
+        var current_minutes = currentdate.getMinutes();
+        var dd = currentdate.getDate();
+        var mm = currentdate.getMonth()+1; //January is 0!
+
+    } catch (error) {
+        console.log("failure getting current time");
+        isEventAtTime();
+        return "Exception occured";
+    }
+    
+    var start_time_hour = start_time.split(":")[0];
+    var start_time_min = start_time.split(":")[1];
+    var end_time_hour = end_time.split(":")[0];
+    var end_time_min = end_time.split(":")[1]; 
+    var event_dd = date.split(".")[0];
+    var event_mm = date.split(".")[1];
+    
+    if(dd == event_dd && mm == event_mm && current_hour > end_time_hour ||
+       dd == event_dd && mm == event_mm && current_hour == end_time_hour && current_minutes > end_time_min ||
+       mm > event_mm || mm == event_mm && dd > event_dd)
+    {
+      return "prev";
+    }
+    else if(dd == event_dd && mm == event_mm && current_hour < start_time_hour ||
+       dd == event_dd && mm == event_mm && current_hour == start_time_hour && current_minutes < start_time_min ||
+       mm < event_mm || mm == event_mm && dd < event_dd) 
+    {
+      return "later";
+    }
+    else
+    {
+      return "now";
+    }
+};
+
+
+
+
+
+
+

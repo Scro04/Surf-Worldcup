@@ -61,7 +61,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       views: {
         'pwa': {
           templateUrl: "templates/comp_pwa.html",
-          controller: 'pwaCtrl'
+          controller: 'compCtrl'
         }
       }
   })
@@ -71,7 +71,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       views: {
         'team': {
           templateUrl: "templates/comp_team.html",
-          controller: 'teamCtrl'
+          controller: 'compCtrl'
         }
       }
     })
@@ -80,7 +80,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       views: {
         'towin': {
           templateUrl: "templates/comp_towin.html",
-          controller: 'towinCtrl'
+          controller: 'compCtrl'
         }
       }
     })

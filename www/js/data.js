@@ -60,7 +60,6 @@ var test_category5 = "Sport";
 var test_offset5 = 1;
 var test_location5 = "Sportveranstalter";
 var test_date5 = "23.04.2015";
-var test_date5= "1.05.2015";
 
 
 //-----------------------------------------------------------------------------
