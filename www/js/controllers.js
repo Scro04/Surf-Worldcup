@@ -93,6 +93,7 @@ angular.module('starter.controllers', [])
         }
     }
 
+
 })
 
 .controller('eventsCtrl', function ($scope) {
@@ -104,11 +105,38 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('sideEventsCtrl', function ($scope) {
+.controller('sideEventsCtrl', function ($scope, $state) {   
+    $scope.nextScreen = function (state) {
+        $state.go(state);
+    
+    };
+
+})
+
+.controller('sideSurfenCtrl', function ($scope) {
 
 
 })
 
+.controller('sideTrendsportCtrl', function ($scope) {
+
+
+})
+
+.controller('sideShowsCtrl', function ($scope) {
+
+
+})
+
+.controller('sideFoodCtrl', function ($scope) {
+
+
+})
+
+.controller('sideOE3Ctrl', function ($scope) {
+
+
+})
 
 
 //Competition Controller

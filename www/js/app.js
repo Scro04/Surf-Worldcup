@@ -89,6 +89,36 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         url: '/side_events_main',
         templateUrl: 'templates/side_events_main.html',
         controller: 'sideEventsCtrl'
+    })
+    
+     .state('side_events_surfen', {
+        url: '/side_events_surfen',
+        templateUrl: 'templates/side_events_surfen.html',
+        controller: 'sideSurfenCtrl'
+    })
+    
+    .state('side_events_trendsport', {
+        url: '/side_events_trendsport',
+        templateUrl: 'templates/side_events_trendsport.html',
+        controller: 'sideTrendsportCtrl'
+    })
+  
+    .state('side_events_shows', {
+        url: '/side_events_shows',
+        templateUrl: 'templates/side_events_shows.html',
+        controller: 'sideShowsCtrl'
+    })
+    
+    .state('side_events_food', {
+        url: '/side_events_foo',
+        templateUrl: 'templates/side_events_food.html',
+        controller: 'sideFoodCtrl'
+    })
+    
+    .state('side_events_oe3', {
+        url: '/side_events_oe3',
+        templateUrl: 'templates/side_events_oe3.html',
+        controller: 'sideOE3Ctrl'
     });
 
   // if none of the above states are matched, use this as the fallback
