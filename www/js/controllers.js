@@ -84,6 +84,7 @@ angular.module('starter.controllers', [])
 
 
         element = "map" + index;
+		console.log(element);
         var image = document.getElementById(element);
 
         if (image.style.maxHeight == "500px") {
@@ -129,6 +130,10 @@ angular.module('starter.controllers', [])
   });
   })
 .controller('pwaCtrl', function ($scope) {
+
+})
+
+.controller('partyCtrl', function ($scope) {
 
 })
 

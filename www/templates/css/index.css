@@ -6,6 +6,7 @@
     background-position: center center;
     height: 100%;
     width: auto;
+	overflow: hidden;
 
 }
 
@@ -71,15 +72,17 @@
     box-sizing: initial;
     color: black;
     margin-bottom: 10px;
-    border-left: 3px solid #FFC107 ;
+    border-left: 4px solid#F44336 ;
     padding-left: 10px;
     width: 70vw;
 }
 
-.upcomingcard {}
+.upcomingcard {
+
+font-family: 'Raleway', sans-serif;}
 
 .indexeventheader {
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 
 .toallevents {
@@ -89,6 +92,7 @@
 .eventcontent {
     font-size: 0.8em;
     margin-top: 5px;
+	
 }
 
 .timelinetime {
@@ -135,5 +139,5 @@ position: absolute;
 }
 .mainnavview
 {
- margin-top: 8%;
+ margin-top: 10%;
 }

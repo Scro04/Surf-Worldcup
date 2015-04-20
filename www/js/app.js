@@ -89,6 +89,64 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         url: '/side_events_main',
         templateUrl: 'templates/side_events_main.html',
         controller: 'sideEventsCtrl'
+    })
+  
+   // Party States
+  .state('party', {
+      url: '/party',
+      templateUrl: 'templates/partys_tabs.html',
+    })
+  
+  
+   .state('party.ko', {
+      url: '/ko',
+      views: {
+        'ko': {
+          templateUrl: "templates/party_ko.html",
+          controller: 'partyCtrl'
+        }
+      }
+  })
+  
+   .state('party.bp', {
+      url: '/bp',
+      views: {
+        'bp': {
+          templateUrl: "templates/party_bp.html",
+          controller: 'partyCtrl'
+        }
+      }
+  })
+  
+   .state('party.bup', {
+      url: '/bup',
+      views: {
+        'bup': {
+          templateUrl: "templates/party_bup.html",
+          controller: 'partyCtrl'
+        }
+      }
+  })
+	
+	 .state('partyfloor', {
+      url: '/partyfloor',
+      templateUrl: 'templates/partyfloor.html',
+      controller: 'partyCtrl'
+    })
+   .state('electrofloor', {
+      url: '/electrofloor',
+      templateUrl: 'templates/electrofloor.html',
+      controller: 'partyCtrl'
+    })
+	 .state('surfersfloor', {
+      url: '/surfersfloor',
+      templateUrl: 'templates/surfersfloor.html',
+      controller: 'partyCtrl'
+    })
+	 .state('randbfloor', {
+      url: '/randbfloor',
+      templateUrl: 'templates/randbfloor.html',
+      controller: 'partyCtrl'
     });
 
   // if none of the above states are matched, use this as the fallback
