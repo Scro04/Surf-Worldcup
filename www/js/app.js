@@ -49,7 +49,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       controller: 'sponsorsCtrl'
     })
 
-
   // Competition States
   .state('competition', {
       url: '/competition',
@@ -90,7 +89,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         templateUrl: 'templates/side_events_main.html',
         controller: 'sideEventsCtrl'
     })
-<<<<<<< HEAD
   
    // Party States
   .state('party', {
@@ -148,7 +146,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       url: '/randbfloor',
       templateUrl: 'templates/randbfloor.html',
       controller: 'partyCtrl'
-=======
+    })
     
      .state('side_events_surfen', {
         url: '/side_events_surfen',
@@ -178,7 +176,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         url: '/side_events_oe3',
         templateUrl: 'templates/side_events_oe3.html',
         controller: 'sideOE3Ctrl'
->>>>>>> origin/develop
     });
 
   // if none of the above states are matched, use this as the fallback

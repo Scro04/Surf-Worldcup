@@ -134,15 +134,14 @@ angular.module('starter.controllers', [])
 
 })
 
-<<<<<<< HEAD
+
 .controller('partyCtrl', function ($scope) {
 
 })
 
-.controller('towinCtrl', function ($scope) {
-=======
+
 .controller('sideOE3Ctrl', function ($scope) {
->>>>>>> origin/develop
+
 
 
 })
