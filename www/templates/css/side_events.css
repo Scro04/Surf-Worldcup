@@ -9,18 +9,17 @@
 }
 
 .list {
-    margin-top: 12%;
-    height: 80%;
+    height: 90%;
     width: auto;
 }
 
-#list_item {
+#list_item_main {
     height: 20%;
     width: auto;
     background-color: rgba(255, 255, 255, 0.9);
 }
 
-#list_item a {
+#list_item_main a {
     position: absolute;
     text-align: center;
     margin: 0 auto;
@@ -28,18 +27,20 @@
     right: 0;
     top: 15%;
     font-size: 35px;
+    color: #009688;
 }
 
-#list_item span {
+#list_item_main span {
     position: absolute;
     text-align: center;
     margin: 0 auto;
     left: 0;
     right: 0;
     bottom: 10%;
-    font-size: 25px;
+    font-size: 20px;
+    color: #009688;
 }
 
-#list_item:hover {
+#list_item_main:hover {
     background-color: rgb(211, 211, 211);
 }

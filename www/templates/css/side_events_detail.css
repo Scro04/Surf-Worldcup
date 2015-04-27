@@ -24,6 +24,7 @@
     left: 2%;
     font-size: 20px;
     margin-bottom: 10%;
+    color: #009688;
 }
 
 .item-divider {
@@ -37,6 +38,7 @@
     margin-top: 3%;
     left: 2%;
     font-size: 26px;
+    color: #009688;
 }
 
 
@@ -47,6 +49,10 @@
     white-space: pre-wrap;
     margin-bottom: -10%;
     line-height: 20px;
+}
+
+#list_item #text a{
+   color: #009688;
 }
 
 #list_item:hover {
