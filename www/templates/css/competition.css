@@ -1,43 +1,10 @@
 .content_comp {
-    position: fixed;
     background-image: url(../../img/8722167302_9511b81630_o.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 100%;
-    width: auto;
-
-}
-
-.button_team{
-    background-image:  url(../../img/team.jpg);
-    background-size: cover;
-    margin-top: 10%;
-    margin-left: 5%;
-    font-size: 25px;
-    height: 25%;
-    width: 90%;
-}
-
-.button_pwa{
-    background-image:  url(../../img/competition2.jpg);
-    background-size: cover;
-    margin-top: 5%;
-    margin-left: 5%;
-    height: 25%;
-    width: 90%;
-    font-size: 25px;
-}
-
-.button_tow{
-    background-image:  url(../../img/competition3.jpg);
-    background-size: cover;
-    margin-top: 5%;
-    margin-left: 5%;
-    height: 25%;
-    width: 90%;
-    font-size: 25px;
-    color: aliceblue;
+    height: auto; 
+    width: auto; 
 }
 
 .card {
@@ -45,6 +12,7 @@
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 5%;
+ 
 }
 
 .item.item-divider{
@@ -52,25 +20,18 @@
     font-size: 25px;
 }
 
-.rider_button{
-    margin-left: 5%;
-    height: 5%;
-    width: 90%;
-}
-
 .image{
     height: 60%;
     width: 60%;
 }
-.rider{
-  display:none;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 1%;
-  opacity: 0.96; 
+
+.now{
+  color: red;
 }
-.tabs{
+.later{
+  color: black;
 }
+<<<<<<< HEAD
 
 
 
@@ -79,3 +40,16 @@
 left: 90%;
 font-size: 1em;}
 
+=======
+.prev {
+    color: lightgray;
+}
+.fail {
+   color: white; 
+}
+.header_table {
+  color: black;
+  font-weight: bold;
+  border-bottom:2pt solid black;
+}
+>>>>>>> origin/develop

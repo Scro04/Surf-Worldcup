@@ -61,7 +61,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       views: {
         'pwa': {
           templateUrl: "templates/comp_pwa.html",
-          controller: 'pwaCtrl'
+          controller: 'compCtrl'
         }
       }
   })
@@ -71,7 +71,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       views: {
         'team': {
           templateUrl: "templates/comp_team.html",
-          controller: 'teamCtrl'
+          controller: 'compCtrl'
         }
       }
     })
@@ -80,7 +80,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       views: {
         'towin': {
           templateUrl: "templates/comp_towin.html",
-          controller: 'towinCtrl'
+          controller: 'compCtrl'
         }
       }
     })
@@ -90,6 +90,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         templateUrl: 'templates/side_events_main.html',
         controller: 'sideEventsCtrl'
     })
+<<<<<<< HEAD
   
    // Party States
   .state('party', {
@@ -147,6 +148,37 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       url: '/randbfloor',
       templateUrl: 'templates/randbfloor.html',
       controller: 'partyCtrl'
+=======
+    
+     .state('side_events_surfen', {
+        url: '/side_events_surfen',
+        templateUrl: 'templates/side_events_surfen.html',
+        controller: 'sideSurfenCtrl'
+    })
+    
+    .state('side_events_trendsport', {
+        url: '/side_events_trendsport',
+        templateUrl: 'templates/side_events_trendsport.html',
+        controller: 'sideTrendsportCtrl'
+    })
+  
+    .state('side_events_shows', {
+        url: '/side_events_shows',
+        templateUrl: 'templates/side_events_shows.html',
+        controller: 'sideShowsCtrl'
+    })
+    
+    .state('side_events_food', {
+        url: '/side_events_foo',
+        templateUrl: 'templates/side_events_food.html',
+        controller: 'sideFoodCtrl'
+    })
+    
+    .state('side_events_oe3', {
+        url: '/side_events_oe3',
+        templateUrl: 'templates/side_events_oe3.html',
+        controller: 'sideOE3Ctrl'
+>>>>>>> origin/develop
     });
 
   // if none of the above states are matched, use this as the fallback
