@@ -3,8 +3,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: auto; 
-    width: auto; 
+    width: 100%; 
+	height: auto;
+	
 }
 
 .card {
@@ -12,6 +13,7 @@
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 5%;
+	margin-bottom: 5%;
  
 }
 
@@ -31,8 +33,6 @@
 .later{
   color: black;
 }
-<<<<<<< HEAD
-
 
 
 #party_forward {
@@ -40,7 +40,7 @@
 left: 90%;
 font-size: 1em;}
 
-=======
+
 .prev {
     color: lightgray;
 }
@@ -52,4 +52,4 @@ font-size: 1em;}
   font-weight: bold;
   border-bottom:2pt solid black;
 }
->>>>>>> origin/develop
+
