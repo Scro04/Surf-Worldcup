@@ -5,6 +5,7 @@
     background-position: center center;
     height: auto; 
     width: auto; 
+    position: absolute;
 }
 
 .card {
@@ -31,16 +32,12 @@
 .later{
   color: black;
 }
-<<<<<<< HEAD
-
-
 
 #party_forward {
 
 left: 90%;
 font-size: 1em;}
 
-=======
 .prev {
     color: lightgray;
 }
@@ -52,4 +49,4 @@ font-size: 1em;}
   font-weight: bold;
   border-bottom:2pt solid black;
 }
->>>>>>> origin/develop
+
