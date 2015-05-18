@@ -1,14 +1,3 @@
-.content_comp {
-    background-image: url(../../img/background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: auto; 
-    width: auto; 
-    position: absolute;
-
-}
-
 .card {
     opacity: 0.96;
     margin-left: 5%;
@@ -53,7 +42,6 @@ font-size: 1em;}
   font-weight: bold;
   border-bottom:2pt solid black;
 }
-
 
 #rider_button {
 	background: blue;
