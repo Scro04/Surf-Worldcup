@@ -8,14 +8,14 @@
 
 <div class="rider" id="rider" ng-repeat="item in riderData track by $index">
 
-  
-<div class="item item-avatar">
+<a ng-repeat="item in riderData track by $index" class="item item-avatar">
     <img src="img/homer.jpg">
-    <h2>{{item[1]}}</h2>
-    <p>Dezember 12, 1976</p>
-  </div>
+    <h2>{{item[1]}} {{item[2]}}</h2>
+    <p>{{item[3]}} | {{item[4]}}</p>
+ </a>
 
 
+	</div>
   
 </ion-content>
 </ion-view>

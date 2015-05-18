@@ -1,8 +1,6 @@
 angular.module('starter.controllers', [])
 
 
-
-
 .controller('appController', function ($scope, $state) {
                                                 
     $scope.next = function (state) {
@@ -171,6 +169,7 @@ angular.module('starter.controllers', [])
   //Function to show the Riders
 	
 	var tmp_array = [];
+	console.log(riderDataSet_);
 	for(var x = 0; x < riderDataSet_.length; x++)
 	{
 		if(riderDataSet_[x][6] == 2)
@@ -178,9 +177,12 @@ angular.module('starter.controllers', [])
 			tmp_array.push(riderDataSet_[x]);
 		}
 	}
-  
-	console.log("Rider Data is: " + $scope.riderData);
+
+ 
 	$scope.riderData = tmp_array;
+	
+	console.log(tmp_array[0][1]);
+	console.log("Rider Data is: " + $scope.riderData);
 	
   var button = document.getElementById('rider_button');  
   var compare = "open";
@@ -202,6 +204,7 @@ angular.module('starter.controllers', [])
 //Competition Controller
 .controller('compCtrl', function ($scope) {
 	
+	console.log(riderDataSet_);
  
  /* var table_size = document.getElementById('table').rows.length;
   
