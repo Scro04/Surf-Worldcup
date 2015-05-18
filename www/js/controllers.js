@@ -166,24 +166,22 @@ angular.module('starter.controllers', [])
 })
 
 .controller('pwaCtrl', function ($scope) {
-  //Function to show the Riders
-	
-	var tmp_array = [];
-	console.log(riderDataSet_);
-	for(var x = 0; x < riderDataSet_.length; x++)
-	{
-		if(riderDataSet_[x][6] == 2)
-		{
-			tmp_array.push(riderDataSet_[x]);
-		}
-	}
+  
+  $scope.header = bewerbeDataSet_[1][1];
+  $scope.descr = bewerbeDataSet_[1][4];
+    
+  //------------------------- Rider -----------------------------	
+  var tmp_array = [];
+  console.log(riderDataSet_);
+  for(var x = 0; x < riderDataSet_.length; x++)
+  {
+      if(riderDataSet_[x][6] == 2)
+      {
+          tmp_array.push(riderDataSet_[x]);
+      }
+  }
+  $scope.riderData = tmp_array;
 
- 
-	$scope.riderData = tmp_array;
-	
-	console.log(tmp_array[0][1]);
-	console.log("Rider Data is: " + $scope.riderData);
-	
   var button = document.getElementById('rider_button');  
   var compare = "open";
   $(document).ready(function () {
@@ -195,6 +193,33 @@ angular.module('starter.controllers', [])
         } else {
           button.className = "button icon-right ion-chevron-right";
           compare = "open";
+        }
+    });
+  });
+  //------------------------- Program -----------------------------
+  var tmp_array_prog = []; 
+    
+  for(var x = 0; x < programmDataSet_.length; x++)
+  {
+    if(programmDataSet_[x][5] == 2)
+    {
+      tmp_array_prog.push(programmDataSet_[x]);    
+    }
+  }
+  $scope.programData = tmp_array_prog;
+  
+  
+  var button1 = document.getElementById('program_button');  
+  var compare1 = "open";
+  $(document).ready(function () {
+    $('#program_button').click(function () {
+        $('.program').slideToggle("fast");
+        if (compare1 == "open") {
+          button1.className = "button icon-right ion-chevron-down";
+          compare1 = "close";
+        } else {
+          button1.className = "button icon-right ion-chevron-right";
+          compare1 = "open";
         }
     });
   });
