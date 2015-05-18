@@ -1,6 +1,6 @@
 .content_home {
     position: fixed;
-    background-image: url(../../img/8722167302_9511b81630_o.jpg);
+    background-image: url(../../img/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -116,8 +116,6 @@ font-family: 'Raleway', sans-serif;}
     padding-left: auto;
     padding-right: auto;
 }
-
-
 
 .img-fade-in {
     display: inherit;

@@ -1,7 +1,7 @@
 angular.module('starter.controllers', [])
 
 .controller('appController', function ($scope, $state) {
-
+                                                
     $scope.next = function (state) {
         console.log("testweed");
         $state.go("events");
@@ -44,7 +44,7 @@ angular.module('starter.controllers', [])
 
 
     
-})
+})      
 
 .controller('homeCtrl', function ($scope, $state) {
 
@@ -145,6 +145,25 @@ angular.module('starter.controllers', [])
 
 
 })
+
+.controller('pwaCtrl', function ($scope) {
+  //Function to show the Riders
+  var button = document.getElementById('rider_button');  
+  var compare = "open";
+  $(document).ready(function () {
+    $('#rider_button').click(function () {
+        $('.rider').slideToggle("fast");
+        if (compare == "open") {
+          button.className = "button icon-right ion-chevron-down";
+          compare = "close";
+        } else {
+          button.className = "button icon-right ion-chevron-right";
+          compare = "open";
+        }
+    });
+  });
+})
+
 
 //Competition Controller
 .controller('compCtrl', function ($scope) {
