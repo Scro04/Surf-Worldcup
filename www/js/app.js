@@ -21,7 +21,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   });
 })
                          
-.config(function ($stateProvider, $urlRouterProvider) {
+.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
 
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
@@ -114,7 +114,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       url: '/show',
       views: {
         'show': {
-          templateUrl: "templates/side_events_oe3.html",
+          templateUrl: "templates/side_events_surfen.html",
           controller: 'sideEventsCtrl'
         }
       }
@@ -181,5 +181,10 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/home');
+    
+//$ionicConfigProvider.tabs.position('bottom');
 
 });
+
+
+
