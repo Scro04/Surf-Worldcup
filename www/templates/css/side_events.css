@@ -8,39 +8,20 @@
     width: auto;
 }
 
-.list {
-    height: 90%;
-    width: auto;
+.tabs
+{
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
 }
 
-#list_item_main {
-    height: 20%;
-    width: auto;
-    background-color: rgba(255, 255, 255, 0.9);
+.tab-nav
+{
+   background-color: rgba(0, 0, 0, 0.9);
+   color: white; 
 }
 
-#list_item_main a {
-    position: absolute;
-    text-align: center;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    top: 15%;
-    font-size: 35px;
-    color: #009688;
-}
-
-#list_item_main span {
-    position: absolute;
-    text-align: center;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    bottom: 10%;
-    font-size: 20px;
-    color: #009688;
-}
-
-#list_item_main:hover {
-    background-color: rgb(211, 211, 211);
+.tab-item
+{
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
 }

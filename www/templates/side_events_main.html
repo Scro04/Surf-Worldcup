@@ -2,31 +2,17 @@
 
 <link href="templates/css/side_events.css" rel="stylesheet">
 
-<script>
-    $('item').bind('touchstart', function () {});
-</script>
-
 <ion-content class="content_event">
-    <div class="list">
-        <div id="list_item_main" class="item" ng-click="nextScreen('side_events_surfen')">
-            <a class="icon ion-navigate"></a>
-            <span>Surfen</span>
-        </div>
-        <div id="list_item_main" class="item" ng-click="nextScreen('side_events_trendsport')">
-            <a class="icon ion-fireball"></a>
-            <span>Trendsport</span>
-        </div>
-        <div id="list_item_main" class="item" ng-click="nextScreen('side_events_shows')">
-            <a class="icon ion-wand"></a>
-            <span>Shows</span>
-        </div>
-        <div id="list_item_main" class="item" ng-click="nextScreen('side_events_food')">
-            <a class="icon ion-beer"></a>
-            <span>Food + Drinks</span>
-        </div>
-        <div id="list_item_main" class="item" ng-click="nextScreen('side_events_oe3')">
-            <a class="icon ion-radio-waves"></a>
-            <span>Ö3 - Seebühne</span>
-        </div>
-    </div>
+    <ion-tabs id="tabs">
+        <ion-tab title="Sport" ui-sref="sideEvents.sport">  
+            <ion-nav-view name="sport"></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Food & Drinks" ui-sref="sideEvents.food">
+            <ion-nav-view name="food"></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Shows" onclick="sideEvents.show">
+            <ion-nav-view name="show"></ion-nav-view>
+        </ion-tab>
+            </div>
+    </ion-tabs>
 </ion-content>

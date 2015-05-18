@@ -107,10 +107,20 @@ angular.module('starter.controllers', [])
 })
 
 .controller('sideEventsCtrl', function ($scope, $state) {   
-    $scope.nextScreen = function (state) {
-        $state.go(state);
-    
-    };
+  var button = document.getElementById('btnSurf');  
+  var compare = "open";
+  $(document).ready(function () {
+    $('#rider_button').click(function () {
+        $('.rider').slideToggle("fast");
+        if (compare == "open") {
+          button.className = "button icon-right ion-chevron-down";
+          compare = "close";
+        } else {
+          button.className = "button icon-right ion-chevron-right";
+          compare = "open";
+        }
+    });
+  });
 
 })
 
