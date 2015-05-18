@@ -1,11 +1,12 @@
 .content_comp {
-    background-image: url(../../img/8722167302_9511b81630_o.jpg);
+    background-image: url(../../img/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    width: 100%; 
-	height: auto;
-	
+    height: auto; 
+    width: auto; 
+    position: absolute;
+
 }
 
 .card {
@@ -51,5 +52,24 @@ font-size: 1em;}
   color: black;
   font-weight: bold;
   border-bottom:2pt solid black;
+}
+
+
+#rider_button {
+	background: blue;
+    font-size: 30px;
+    color: white;
+    margin-left: 5%;
+    margin-top: 5%;
+    height: 5%;
+    width: 90%;
+    
+}
+.rider{
+  display:none;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 1%;
+  opacity: 0.96; 
 }
 
