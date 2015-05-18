@@ -173,12 +173,12 @@ angular.module('starter.controllers', [])
 	var tmp_array = [];
 	for(var x = 0; x < riderDataSet_.length; x++)
 	{
-
 		if(riderDataSet_[x][6] == 2)
 		{
 			tmp_array.push(riderDataSet_[x]);
 		}
 	}
+  
 	console.log("Rider Data is: " + $scope.riderData);
 	$scope.riderData = tmp_array;
 	
