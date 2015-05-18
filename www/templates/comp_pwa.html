@@ -6,26 +6,15 @@
 
 <button id="rider_button" class="button icon-right ion-chevron-right" ng-click="opendiv()">Rider</button>
 
-<div class="rider" id="rider">
+<div class="rider" id="rider" ng-repeat="item in riderData track by $index">
 
   
 <div class="item item-avatar">
     <img src="img/homer.jpg">
-    <h2>Homer Simpson</h2>
+    <h2>{{item[1]}}</h2>
     <p>Dezember 12, 1976</p>
   </div>
-<div class="item item-avatar">
-    <img src="img/marty.jpg">
-    <h2>Marty McFly</h2>
-    <p>November 05, 1955</p>
-  </div>
-  
-  <div class="item item-avatar">
-    <img src="img/fritz.jpg">
-    <h2>Fritz Phantom</h2>
-    <p>Juli 15, 1990</p>
-  </div>
-</div>
+
 
   
 </ion-content>
