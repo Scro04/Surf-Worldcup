@@ -1,11 +1,13 @@
 angular.module('starter.controllers', [])
 
+
+
+
 .controller('appController', function ($scope, $state) {
                                                 
     $scope.next = function (state) {
-        console.log("testweed");
-        $state.go("events");
-        //$ionicSlideBoxDelegate.next();
+
+		$state.go(state);
 
     }
 
@@ -45,6 +47,15 @@ angular.module('starter.controllers', [])
 
     
 })      
+
+
+.controller('NavCtrl', function($scope, $ionicSideMenuDelegate) {
+  $scope.showMenu = function () {
+    $ionicSideMenuDelegate.toggleLeft();
+  };
+
+})
+
 
 .controller('homeCtrl', function ($scope, $state) {
 
@@ -192,7 +203,7 @@ angular.module('starter.controllers', [])
 .controller('compCtrl', function ($scope) {
 	
  
-  var table_size = document.getElementById('table').rows.length;
+ /* var table_size = document.getElementById('table').rows.length;
   
   for(var i = 0 ; i < table_size; i++)
   {
@@ -225,7 +236,7 @@ angular.module('starter.controllers', [])
     {
       document.getElementById(event_el).className = "fail";
     }
-  }
+  }*/
 })
 
 function appController($scope, $ionicSideMenuDelegate) {

@@ -1,4 +1,4 @@
-.main_content {
+#main_content {
     position: fixed;
     background-image: url(../../img/background.jpg);
     background-size: cover;

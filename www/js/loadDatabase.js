@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+	
 //-----------------------------------------------------------------------------
 //----------------------------GLOBAL DATABASE DATA-----------------------------
 
@@ -7,7 +7,8 @@ riderDataSet_ = [];
 bewerbeDataSet_ = [];
 programmDataSet_ = [];
 sideEventsDataSet_ = [];
-
+	
+	
 //-----------------------------------------------------------------------------	
 //------------------------------LOAD RIDERS DATA-------------------------------
 
@@ -20,7 +21,7 @@ $.ajax({
 		console.log(riderDataSet_);
 	},
 	error: function (result) {
-		console.log(result);
+		loadRiderJSON();
 	}
 });
 //-----------------------------------------------------------------------------	
@@ -35,7 +36,7 @@ $.ajax({
 		console.log(bewerbeDataSet_);
 	},
 	error: function (result) {
-		console.log(result);
+		loadBewerbeJSON();
 	}
 });
 //-----------------------------------------------------------------------------	
@@ -50,7 +51,7 @@ $.ajax({
 		console.log(programmDataSet_);
 	},
 	error: function (result) {
-		console.log(result);
+		loadProgramJSON();
 	}
 });
 //-----------------------------------------------------------------------------	
@@ -65,35 +66,80 @@ $.ajax({
 		console.log(sideEventsDataSet_);
 	},
 	error: function (result) {
-		console.log(result);
+		loadSideEventJSON();
 	}
 });
 //-----------------------------------------------------------------------------	
 	
 	
-//-----------------------------LOAD FROM JSON-----------------------------------
-var loadRider = "json/Rider.json";
-var loadBewerbe = "json/Bewerbe.json";
-var loadProgram = "json/Program.json";
-var loadSideEvents = "json/SideEvents.json";
-
-function loadFromJson(data)
+//-----------------------------LOAD RIDER FROM JSON----------------------------
+function loadRiderJSON()
 {
-$.ajax({
-	type: "GET",
-	url: string,
-	dataType: "json",
-	success: function (data) {
-		var arr = [];
-		for(var x = 0; x < data.length; x++)
-			arr.push($.map(data[x], function(el) { return el; }));
-		console.log(arr);
-	},
-	error: function (result) {
-		console.log(result);
-	}
-  }
-});
+	$.ajax({
+		type: "GET",
+		url: "json/Rider.json",
+		dataType: "json",
+		success: function (data) {
+			for(var x = 0; x < data.length; x++)
+				riderDataSet_.push($.map(data[x], function(el) { return el; }));
+			console.log(riderDataSet_);		
+		},
+		error: function (result) {
+			console.log(result);
+		}
+	  });
+}
+//-----------------------------LOAD BEWERBE JSON-------------------------------
+function loadBewerbeJSON()
+{
+	$.ajax({
+		type: "GET",
+		url: "json/Bewerbe.json",
+		dataType: "json",
+		success: function (data) {
+			for(var x = 0; x < data.length; x++)
+				bewerbeDataSet_.push($.map(data[x], function(el) { return el; }));
+			console.log(bewerbeDataSet_);		
+		},
+		error: function (result) {
+			console.log(result);
+		}
+	  });
+}
+//-----------------------------LOAD PROGRAM JSON-------------------------------
+function loadProgramJSON()
+{
+	$.ajax({
+		type: "GET",
+		url: "json/Program.json",
+		dataType: "json",
+		success: function (data) {
+			for(var x = 0; x < data.length; x++)
+				programmDataSet_.push($.map(data[x], function(el) { return el; }));
+			console.log(programmDataSet_);		
+		},
+		error: function (result) {
+			console.log(result);
+		}
+	  });
+}
+//-----------------------------LOAD SIDE EVENT JSON----------------------------
+function loadSideEventJSON()
+{
+	$.ajax({
+		type: "GET",
+		url: "json/SideEvents.json",
+		dataType: "json",
+		success: function (data) {
+			for(var x = 0; x < data.length; x++)
+				sideEventsDataSet_.push($.map(data[x], function(el) { return el; }));
+			console.log(sideEventsDataSet_);		
+		},
+		error: function (result) {
+			console.log(result);
+		}
+	  });
+}
 
-		
+	
 });

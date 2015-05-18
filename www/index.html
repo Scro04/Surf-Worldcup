@@ -7,14 +7,13 @@
 <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="externalres/jquery2.1.1.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="externalres/materialize.min.css" media="screen,projection" />
+
     <link href="css/style.css" srel="stylesheet">
     <link href="templates/css/index.css" rel="stylesheet">
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script type="text/javascript" src="externalres/materialize.min.js"></script>
   	<script src="lib/ionic/js/ionic.bundle.js"></script>
 	
 	<script type="text/javascript" src="js/loadDatabase.js"></script>
@@ -36,31 +35,30 @@
 </head>
 
 <body ng-app="starter" ng-controller="appController as appCtrl">
+    
     <ion-side-menus>
-        <ion-view view-title="Surf Worldcup 2016">
-            <!-- Header Bar --> 
-            <ion-nav-bar class="bar-light">
-                <ion-nav-back-button>
+		<ion-view>
+        <ion-side-menu-content ng-controller="NavCtrl">
+          <ion-nav-bar class="bar-positive">
+            <ion-nav-back-button class="button-icon ion-arrow-left-c">
+            </ion-nav-back-button>
+          
+            <ion-nav-buttons side="left">
+              <button class="button button-icon button-clear ion-navicon" ng-click="showMenu()">
+              </button>
+            </ion-nav-buttons>
 
-                </ion-nav-back-button>
 
-                <ion-nav-buttons side="left">
-                    <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
-                    </button>
-                </ion-nav-buttons>
-                <ion-nav-buttons side="right">
-                    <button class="button button-icon button-clear ion-person">
-                    </button>
-                </ion-nav-buttons>
-            </ion-nav-bar>
-            <!-- --> 
-            <ion-side-menu side="left">
-                <ion-header-bar class="bar-stable">
-                    <h1 class="title">Hauptmenü</h1>
-                </ion-header-bar>
-                <ion-content>
-                    <!-- Navbar! link correlates to state -- Controller assigned automatically -->
-                    <ion-list>
+          </ion-nav-bar>
+          <ion-nav-view animation="slide-left-right"></ion-nav-view>
+        </ion-side-menu-content> 
+        
+        <ion-side-menu side="left">
+          <ion-header-bar class="bar bar-header bar-assertive">
+            <h1 class="title">Left Menu</h1>
+          </ion-header-bar>
+          <ion-content has-header="true">
+           <ion-list>
                         <ion-item nav-clear menu-close href="#/home">
                             Home
                         </ion-item>
@@ -83,20 +81,15 @@
                             Side Events
                         </ion-item>
                     </ion-list>
-                </ion-content>
-            </ion-side-menu>
-            
-            <ion-side-menu-content>
-                
-                <!-- template content is gonna be pushed in following directive --> 
-                <ion-nav-view class="mainnavview" >
+          </ion-content>
+			
+        </ion-side-menu>
+      </ion-view>
 
-                </ion-nav-view>
-                <!-- End of pushed content --> 
-            </ion-side-menu-content>
-            
-        </ion-view>
-    </ion-side-menus>
+      </ion-side-menus>
+	
+
+
 </body>
 
 </html>
