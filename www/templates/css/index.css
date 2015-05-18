@@ -1,12 +1,11 @@
 .content_home {
-    position: fixed;
+    position: absolute;
     background-image: url(../../img/8722167302_9511b81630_o.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 100%;
+    height: auto;
     width: auto;
-	overflow: hidden;
 
 }
 
@@ -15,8 +14,9 @@
 }
 .slider
 {
-    position: relative;
+    position: absolute;
     height: 25%;
+	max-height: 160px;
     width: 90%;
     top: 5%;
     left: 0;
@@ -72,13 +72,13 @@
     box-sizing: initial;
     color: black;
     margin-bottom: 10px;
-    border-left: 4px solid#F44336 ;
+    border-left: 3px solid#F44336;
     padding-left: 10px;
+	padding-bottom: 
     width: 70vw;
 }
 
 .upcomingcard {
-
 font-family: 'Raleway', sans-serif;}
 
 .indexeventheader {
@@ -101,7 +101,8 @@ font-family: 'Raleway', sans-serif;}
     float: left;
 }
 
-.card-content {}
+.card-content {
+}
 
 .mapimage {
     width: 60vw;

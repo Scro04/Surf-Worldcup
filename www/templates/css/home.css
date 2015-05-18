@@ -22,15 +22,9 @@ font-size: 1.5em;
 }
 
 
-.content_home {
-	
-position: fixed;
-height: 100%;
-overflow: hidden;
-}
 
 .row {
 
 	position: absolute;
-	bottom: 15%;
+	top: 20%;
 }

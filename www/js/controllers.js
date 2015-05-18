@@ -51,7 +51,7 @@ angular.module('starter.controllers', [])
     $scope.$watch('$viewContentLoaded', function () {
 
         getSlider();
-		getDataSet(function()
+		/*getDataSet(function()
 		{
 			console.log("Data loaded");
 			var data = getUpcomingEventByIdandTime("Sport");
@@ -75,7 +75,7 @@ angular.module('starter.controllers', [])
         		document.getElementById("event3_time").innerHTML = data3[2] + " - " + data3[3];
         		document.getElementById("event3_descr").innerHTML = data3[1];
 			}
-		})
+		})*/
 
 		
 
