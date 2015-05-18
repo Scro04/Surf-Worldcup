@@ -8,7 +8,7 @@ $dbconfig = new DBConfig();
 $mysql_link = $dbconfig->db_connect();
 
 // Select all  pre-defined user messages
-$query = "SELECT * FROM Rider"; 
+$query = "SELECT * FROM SideEvents"; 
 $result = MYSQL_QUERY($query);
   
 $x = 0;
@@ -21,19 +21,13 @@ while($x < $num)
 {
 	$tmp_array = array();
     $id = mysql_result($result, $x, "ID");
-	$vorname = mysql_result($result, $x, "Vorname");
-	$nachname = mysql_result($result, $x, "Nachname");
-	$land = mysql_result($result, $x, "Land");
- 	$kennung = mysql_result($result, $x, "Kennung");
-	$link = mysql_result($result, $x, "Bild-Link");
+	$subject = mysql_result($result, $x, "Subject");
+	$description = mysql_result($result, $x, "Description");
 	$type = mysql_result($result, $x, "Type");
     
     array_push($tmp_array, $id);
-	array_push($tmp_array, $vorname);
-	array_push($tmp_array, $nachname);
-	array_push($tmp_array, $land);
-	array_push($tmp_array, $kennung);
-	array_push($tmp_array, $link);
+	array_push($tmp_array, $subject);	
+	array_push($tmp_array, $description);
 	array_push($tmp_array, $type);
 	array_push($array, $tmp_array);
     $x++;

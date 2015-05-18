@@ -8,7 +8,7 @@ $dbconfig = new DBConfig();
 $mysql_link = $dbconfig->db_connect();
 
 // Select all  pre-defined user messages
-$query = "SELECT * FROM Rider"; 
+$query = "SELECT * FROM Program"; 
 $result = MYSQL_QUERY($query);
   
 $x = 0;
@@ -21,19 +21,17 @@ while($x < $num)
 {
 	$tmp_array = array();
     $id = mysql_result($result, $x, "ID");
-	$vorname = mysql_result($result, $x, "Vorname");
-	$nachname = mysql_result($result, $x, "Nachname");
-	$land = mysql_result($result, $x, "Land");
- 	$kennung = mysql_result($result, $x, "Kennung");
-	$link = mysql_result($result, $x, "Bild-Link");
+	$date = mysql_result($result, $x, "Date");
+	$from = mysql_result($result, $x, "From_");
+	$to = mysql_result($result, $x, "To_");
+	$subject = mysql_result($result, $x, "Subject");
 	$type = mysql_result($result, $x, "Type");
     
     array_push($tmp_array, $id);
-	array_push($tmp_array, $vorname);
-	array_push($tmp_array, $nachname);
-	array_push($tmp_array, $land);
-	array_push($tmp_array, $kennung);
-	array_push($tmp_array, $link);
+	array_push($tmp_array, $date);
+	array_push($tmp_array, $from);
+	array_push($tmp_array, $to);
+	array_push($tmp_array, $subject);
 	array_push($tmp_array, $type);
 	array_push($array, $tmp_array);
     $x++;

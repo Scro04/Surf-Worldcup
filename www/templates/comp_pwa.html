@@ -6,22 +6,12 @@
 
 <div class="rider" id="rider">
 
-<div class="item item-avatar">
+<div class="item item-avatar" ng-repeat="item in riderData track by $index">
     <img src="img/homer.jpg">
-    <h2>Homer Simpson</h2>
-    <p>Dezember 12, 1976</p>
+    <h2>{{item[1]}} {{item[2]}}</h2>
+    <p>{{item[3]}} | {{item[4]}}</p>
   </div>
-<div class="item item-avatar">
-    <img src="img/marty.jpg">
-    <h2>Marty McFly</h2>
-    <p>November 05, 1955</p>
-  </div>
-  
-  <div class="item item-avatar">
-    <img src="img/fritz.jpg">
-    <h2>Fritz Phantom</h2>
-    <p>Juli 15, 1990</p>
-  </div>
-</div>
+	
+	</div>
   
 </ion-content>

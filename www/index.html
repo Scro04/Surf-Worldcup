@@ -17,27 +17,10 @@
     <script type="text/javascript" src="externalres/materialize.min.js"></script>
   	<script src="lib/ionic/js/ionic.bundle.js"></script>
 	
-	<script type="text/javascript"> 
- 	$(document).ready(function(){
-		    riderDataSet_ = []; 
-	
- 			$.ajax({
-            type: "GET",
-            url: "php/Rider.php",
-            dataType: "json",
-            success: function (data) {
-				console.log(data);
-            },
-            error: function (result) {
-                console.log(result);
-            }
-        });
-		
-		
-	});
-	</script>
+	<script type="text/javascript" src="js/loadDatabase.js"></script>
     <script type="text/javascript" src="js/functionality.js"></script>
-	
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
     <!-- ionic/angularjs js -->
   
 

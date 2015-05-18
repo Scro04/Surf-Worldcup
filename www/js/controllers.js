@@ -158,6 +158,19 @@ angular.module('starter.controllers', [])
 
 .controller('pwaCtrl', function ($scope) {
   //Function to show the Riders
+	
+	var tmp_array = [];
+	for(var x = 0; x < riderDataSet_.length; x++)
+	{
+
+		if(riderDataSet_[x][6] == 2)
+		{
+			tmp_array.push(riderDataSet_[x]);
+		}
+	}
+	console.log("Rider Data is: " + $scope.riderData);
+	$scope.riderData = tmp_array;
+	
   var button = document.getElementById('rider_button');  
   var compare = "open";
   $(document).ready(function () {
@@ -177,6 +190,7 @@ angular.module('starter.controllers', [])
 
 //Competition Controller
 .controller('compCtrl', function ($scope) {
+	
  
   var table_size = document.getElementById('table').rows.length;
   
