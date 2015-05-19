@@ -1,31 +1,52 @@
 <link href="templates/css/competition.css" rel="stylesheet">
 
-<ion-content class="content_comp">
+<ion-view title="Bewerbe">
+  <ion-content has-header="true" has-footer="true" padding="true" id="main_content">
 
-  <ion-tabs class="tabs-positive">
-      <ion-tab title="Team" ui-sref="team"></ion-tab>
-      <ion-tab title="PWA"  ui-sref="pwa"></ion-tab>
-      <ion-tab title="TOW-IN EM" ui-sref="towin"></ion-tab>
-  </ion-tabs>
+    <div class="card">
+      <div class="item item-divider">
+        {{header}}
+      </div>
+      <div class="item item-text-wrap">
+        {{descr}}
+        
+      </div>
+    </div>
 
-  <div class="card">
-  <div class="item item-divider">
-    PWA
-  </div>
-  
-  <div class="item item-text-wrap">
-    <p> 
-      <img style="float: right;" class="image" src="img/competition3.jpg" alt="Team" />
-     Bei einem Freestyle Bewerb geht es darum, wer die radikalsten Sprünge und unglaublichsten Tricks auf das Wasser zaubert. In einem K.O. System batteln sich die besten 48 Freestyler der Welt beim ersten Tourstopp der PWA um die Führung im Worldcup und um 35.000 Euro Preisgeld.<br>
+    <button id="rider_button" class="button icon-right ion-chevron-right" ng-click="opendiv_rider()">Rider</button>
 
-     <b>Wer sind die Favoriten?</b><br>
+    <div class="rider" id="rider">
 
-Jose Gollito Estredo aus Venezuela (6-facher WM), Kiri Thode aus Bonaire (WM 2013), Steven van Broeckhoven (WM 2012 & 4-facher EM), Vize Europameister Dieter van der Eyken - beide aus Belgien, der Publikumsliebling aus Bonaire Tonky Frans, Europameister 2012 Davy Scheffers (NL), Anthony Ruenes (FRA) sowie Philip Soltysiak (CAN). <br>
+      <a ng-repeat="item in riderData track by $index" class="item item-avatar">
+        <img src="img/homer.jpg">
+        <h2>{{item[1]}} {{item[2]}}</h2>
+        <p>{{item[3]}} | {{item[4]}}</p>
+      </a>
+    </div>
 
-Aber auch Local Hero Max Matissek hat heuer gute Chancen in die Top 10 vorzustoßen!
-    </p>
-  </div>
-</div>
+    <button id="program_button" class="button icon-right ion-chevron-right" ng-click="opendiv_program()">Programm</button>
 
-  
-</ion-content>
+    </div>
+    <div class="program" id="program">
+      <div class="card">
+        <div class="item item-text-wrap">
+          <table id="table" class="upeventstable">
+            <tr class="header_table">
+              <td>Datum</td>
+              <td>von</td>
+              <td>bis</td>
+              <td>Beschreibung</td>
+            </tr>
+            <tr ng-repeat="item in programData track by $index">
+              <td>{{item[1]}}</td>
+              <td>{{item[2]}}</td>
+              <td>{{item[3]}}</td>
+              <td>{{item[4]}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

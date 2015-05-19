@@ -1,50 +1,10 @@
-.content_comp {
-    position: fixed;
-    background-image: url(../../img/8722167302_9511b81630_o.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 100%;
-    width: auto;
-
-}
-
-.button_team{
-    background-image:  url(../../img/team.jpg);
-    background-size: cover;
-    margin-top: 10%;
-    margin-left: 5%;
-    font-size: 25px;
-    height: 25%;
-    width: 90%;
-}
-
-.button_pwa{
-    background-image:  url(../../img/competition2.jpg);
-    background-size: cover;
-    margin-top: 5%;
-    margin-left: 5%;
-    height: 25%;
-    width: 90%;
-    font-size: 25px;
-}
-
-.button_tow{
-    background-image:  url(../../img/competition3.jpg);
-    background-size: cover;
-    margin-top: 5%;
-    margin-left: 5%;
-    height: 25%;
-    width: 90%;
-    font-size: 25px;
-    color: aliceblue;
-}
-
 .card {
     opacity: 0.96;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 5%;
+	margin-bottom: 5%;
+ 
 }
 
 .item.item-divider{
@@ -52,47 +12,70 @@
     font-size: 25px;
 }
 
-.rider_button{
-    margin-left: 5%;
-    height: 5%;
-    width: 90%;
-}
-
 .image{
     height: 60%;
     width: 60%;
 }
-.rider{
+
+.now{
+  color: red;
+}
+.later{
+  color: black;
+}
+
+
+#party_forward {
+
+left: 90%;
+font-size: 1em;}
+
+
+.prev {
+    color: lightgray;
+}
+.fail {
+   color: white; 
+}
+.header_table {
+  color: black;
+  font-weight: bold;
+  border-bottom:2pt solid black;
+}
+
+#rider_button {
+	background: blue;
+    font-size: 30px;
+    color: white;
+    margin-left: 5%;
+    margin-top: 5%;
+    height: 5%;
+    width: 90%;
+    
+}
+#rider{
   display:none;
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 1%;
   opacity: 0.96; 
 }
-.tabs{
+
+#program_button {
+	background: blue;
+    font-size: 30px;
+    color: white;
+    margin-left: 5%;
+    margin-top: 5%;
+    height: 5%;
+    width: 90%;
+    
 }
-
-
-table { width: 100%; box-sizing: border-box; box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.1); font-family: 'Ubuntu'; /*border-collapse: collapse;*/ border-spacing: 0; background-color: #333333; }
-
-th, td { border: 1px solid rgba(255,255,255,0.1); box-sizing: border-box; }
-
-th { text-transform: uppercase; font-size:10px; font-weight:700; padding: 10px 0; color: rgba(255,255,255,0.5); background-color: #292929; letter-spacing: 1px; }
-
-td { width: 14.285%; transition: all 0.3s; font-size: 14px; color: rgba(255,255,255,0.6); font-weight: 400; font-size: 14px; padding: 1.5% 1.5% 5%; vertical-align: initial; padding: 1.5% 0 ; height: 75px; }
-
-.day:hover { background-color: rgba(0,0,0,0.1); cursor:pointer; }
-
-.today { color: #FFF; background-color: rgba(0,0,0,.25) !important; }
-
-span.number { margin-left: 10% }
-
-span.event { font-size: 20px; height: 4px; background-color: rgba(0,0,0,.3); display: block; margin: 5px 10%; border-radius: 2px; background-color: #91c33b; }
-
-span.event-multiday { margin: 5px -2px; border-radius: 0; }
-span.event-multiday-start { margin-right: -4px;  }
-span.event-multiday-finish { margin-left: -4px;  }
-
-span.event-ghost { background-color:transparent; }
-
+#program{
+  display:none;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 1%;
+  opacity: 0.96; 
+}
 
