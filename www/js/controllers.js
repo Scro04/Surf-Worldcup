@@ -115,21 +115,75 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('sideEventsCtrl', function ($scope, $state) {   
-  var button = document.getElementById('btnSurf');  
-  var compare = "open";
-  $(document).ready(function () {
-    $('#rider_button').click(function () {
-        $('.rider').slideToggle("fast");
-        if (compare == "open") {
-          button.className = "button icon-right ion-chevron-down";
-          compare = "close";
-        } else {
-          button.className = "button icon-right ion-chevron-right";
-          compare = "open";
+.controller('sideEventsCtrl', function ($scope) {   
+  
+    $scope.surf = ["Gratis Windsurf Kurse!", "Auch in diesem Jahr gibt es natürlich wieder die Gratis Surfkurse von De Silva Windresort Kalpitiya für alle, die mal in den Windsurfsport hineinschnuppern möchten."];
+    
+    $scope.paddle = ["Joya Stand-Up Paddling!", "Die momentan am schnellsten wachsende Wassersportart bieten den perfekten Einstieg in den Windsurfsport. Der größte Stand Up Paddling Test mit den besten Marken der Welt, wo insgesamt 80 Boards zum Testen zur Verfügung stehen, wartet heuer in Podersdorf auf alle, die in das Surf-Feeling hineinschnuppern wollen. Einfach draufstellen, lospaddeln oder für die ganz Mutigen: Die Teilnahme an einem SUPstacles-Rennen, wo man mit dem SUP-Board Hindernisse am Wasser meistern muss."];
+    
+    $scope.pit = ["Surfer Pit Walk!", "Der 'Pit Walk' kehrt zurück an den Neusiedler See: Die Top 8 Rider präsentieren sich im neu gestalteten Fahrerlager publikumsnahe wie selten zuvor: Die cool ausgestatteten Kojen bestaunen, Autogramme von den Besten der Welt holen, fachsimplen mit den Pros der Szene - da schlagen sowohl Mädchen- als auch Surferherzen höher."];
+    
+    $scope.beach = ["Beach Summer Games!", "Die Area der Beach Summer Games steht auch heuer wieder ganz im Zeichen des Ballsports. Die höchste Turnierklasse des Volleyballsports macht von 24. bis 26. April Halt und bietet die Möglichkeit sich direkt bei den Profis was abzuschauen. Natürlich kann auch vor Ort selber bei einem Schnuppertraining mitgemacht oder einfach so auf einem Platz gespielt werden. Die TimeOut Beachcamps mit professionellen Trainingseinheiten und Betreuung finden wieder an den Wochenenden statt - Anmeldung im Vorfeld hier oder nach Verfügbarkeit auch noch vor Ort möglich."];
+    
+    $scope.play = ["Skating Playground!", "Die Area to be für alle Skater! Der Treffpunkt am Mittelpunkt des Geländes ist der Traum für alle mit Scooter, Skateboard, Longboard, etc. Obstacles für Tricks, Shows und Contests über den Tag verteilt sorgen für reges Treiben in der Area."];
+    
+    $scope.kids = ["Burgendland/Sportunion Kids Area!", "Die Sportunion Burgenland bringt die Kids zum Sport! Heuer wieder mit dabei: Ihre Airtrack Bahn, Mega-Zorbs (Riesenbälle aus Plastik), Discgolf, Bassalo, ..."];
+    
+    $scope.showInfo = function(value) 
+    {
+        var blanket = document.getElementById("divContainer");
+        var tmp_div = document.getElementById("divTitle");
+        var tmp_div2 = document.getElementById("divText");
+        
+        
+        if(blanket.style.display == "none")
+        {
+            blanket.style.display = "block";
         }
-    });
-  });
+        
+        switch(value)
+        {
+           case 1:
+             
+             tmp_div.innerHTML = $scope.surf[0];
+             tmp_div2.innerHTML = $scope.surf[1];
+             break;
+                
+           case 2:
+             
+             tmp_div.innerHTML = $scope.paddle[0];
+             tmp_div2.innerHTML = $scope.paddle[1];
+             break;
+                
+          case 3:
+             
+             tmp_div.innerHTML = $scope.pit[0];
+             tmp_div2.innerHTML = $scope.pit[1];
+             break;
+        
+          case 4:
+             
+             tmp_div.innerHTML = $scope.beach[0];
+             tmp_div2.innerHTML = $scope.beach[1];
+             break;
+                
+        case 5:
+            
+             tmp_div.innerHTML = $scope.play[0];
+             tmp_div2.innerHTML = $scope.play[1];
+             break;
+                
+        case 6:
+             
+             tmp_div.innerHTML = $scope.kids[0];
+             tmp_div2.innerHTML = $scope.kids[1];
+             break;
+                
+        default:
+            blanket.style.display = "none";     
+    
+        }
+    }
 
 })
 
