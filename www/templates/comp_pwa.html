@@ -3,18 +3,31 @@
 <ion-view title="Bewerbe">
   <ion-content has-header="true" has-footer="true" padding="true" id="main_content">
 
-    <div class="card">
-      <div class="item item-divider">
-        {{header}}
+    <div class="card" id="card">
+      <div class="item item-divider" id="header">
+        {{header[0]}}
       </div>
-      <div class="item item-text-wrap">
-        {{descr}}
-        
+
+      <div class="comment more" id="desc">
+           Bei einem Freestyle Bewerb geht es darum, wer die radikalsten Sprünge und unglaublichsten Tricks auf das Wasser zaubert. In einem K.O. System batteln sich die besten 48 Freestyler der Welt beim ersten Tourstopp der PWA um die Führung im Worldcup und um 35.000 Euro Preisgeld.
+
+Wer sind die Favoriten?
+
+Jose Gollito Estredo aus Venezuela (6-facher WM), Kiri Thode aus Bonaire (WM 2013), Steven van Broeckhoven (WM 2012 & 4-facher EM), Vize Europameister Dieter van der Eyken - beide aus Belgien, der Publikumsliebling aus Bonaire Tonky Frans, Europameister 2012 Davy Scheffers (NL), Anthony Ruenes (FRA) sowie Philip Soltysiak (CAN). 
+
+Aber auch Local Hero Max Matissek hat heuer gute Chancen in die Top 10 vorzustoßen!
+
+
+Ihr habt die Möglichkeit, die Stars hautnah zu erleben! Die Topstars der Windsurf-Szene gehen nicht nur am Wasser direkt vor dem Ufer voll ab, sondern sind auch schon mal bei der einen oder anderen Party anzutreffen. Aber nur, wenn am nächsten Tag kein Wind vorhergesagt ist ;-)
+
       </div>
     </div>
+    
 
-    <button id="rider_button" class="button icon-right ion-chevron-right" ng-click="opendiv_rider()">Rider</button>
+        <button id="rider_button" class="button icon-right ion-chevron-right" ng-click="opendiv_rider()">Starter</button>
 
+    
+        <button id="program_button" class="button icon-right ion-chevron-right ion" ng-click="opendiv_program()">Programm    </button>
     <div class="rider" id="rider">
 
       <a ng-repeat="item in riderData track by $index" class="item item-avatar">
@@ -24,28 +37,15 @@
       </a>
     </div>
 
-    <button id="program_button" class="button icon-right ion-chevron-right" ng-click="opendiv_program()">Programm</button>
 
-    </div>
     <div class="program" id="program">
-      <div class="card">
-        <div class="item item-text-wrap">
-          <table id="table" class="upeventstable">
-            <tr class="header_table">
-              <td>Datum</td>
-              <td>von</td>
-              <td>bis</td>
-              <td>Beschreibung</td>
-            </tr>
-            <tr ng-repeat="item in programData track by $index">
-              <td>{{item[1]}}</td>
-              <td>{{item[2]}}</td>
-              <td>{{item[3]}}</td>
-              <td>{{item[4]}}</td>
-            </tr>
-          </table>
-        </div>
-      </div>
+
+      <a class="item item-avatar" ng-repeat="item in programData track by $index">
+        <img src={{picName[$index]}}>
+        <h2>{{item[4]}}</h2>
+        <p class="icon ion-clock"> {{item[2]}} - {{item[3]}}</p>
+        <p class="icon ion-calendar"> {{item[1]}}</p>
+      </a>
     </div>
 
   </ion-content>
