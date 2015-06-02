@@ -1,0 +1,38 @@
+h2 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 900;
+}
+
+#party_list_design {
+	font-family: 'Lato', sans-serif;
+	font-weight: 900;
+}
+
+h3 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	
+}
+
+#date {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+}
+
+
+
+
+.date_icon {
+	
+	padding-right: 10px;
+}
+
+
+.arrow_card {
+	
+
+	display: inline-block;
+	float: right;
+	position: absolute;
+	left: 90%;
+}

@@ -85,6 +85,21 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
+     // Party States
+  .state('party', {
+      url: '/party',
+      templateUrl: 'templates/party_tabs.html',
+	  controller: 'partyCtrl'
+    })
+  
+
+    
+  	.state('map', {
+	  url: '/map',
+	  templateUrl: 'templates/map.html',
+      controller: 'mapCtrl'
+  })
+	  
   // SideEvents States
   .state('sideEvents', {
       url: '/sideEvents',
@@ -119,66 +134,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
           controller: 'sideEventsCtrl'
         }
       }
-  })
+  });
   
-   // Party States
-  .state('party', {
-      url: '/party',
-      templateUrl: 'templates/party_tabs.html',
-    })
-  
-  
-   .state('party.ko', {
-      url: '/ko',
-      views: {
-        'ko': {
-          templateUrl: "templates/party_ko.html",
-          controller: 'partyCtrl'
-        }
-      }
-  })
-  
-   .state('party.bp', {
-      url: '/bp',
-      views: {
-        'bp': {
-          templateUrl: "templates/party_bp.html",
-          controller: 'partyCtrl'
-        }
-      }
-  })
-  
-   .state('party.bup', {
-      url: '/bup',
-      views: {
-        'bup': {
-          templateUrl: "templates/party_bup.html",
-          controller: 'partyCtrl'
-        }
-      }
-  })
-	
-	 .state('partyfloor', {
-      url: '/partyfloor',
-      templateUrl: 'templates/partyfloor.html',
-      controller: 'partyCtrl'
-    })
-   .state('electrofloor', {
-      url: '/electrofloor',
-      templateUrl: 'templates/electrofloor.html',
-      controller: 'partyCtrl'
-    })
-	 .state('surfersfloor', {
-      url: '/surfersfloor',
-      templateUrl: 'templates/surfersfloor.html',
-      controller: 'partyCtrl'
-    })
-	 .state('randbfloor', {
-      url: '/randbfloor',
-      templateUrl: 'templates/randbfloor.html',
-      controller: 'partyCtrl'
-    })
-    
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/home');

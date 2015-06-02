@@ -30,10 +30,10 @@ font-size: 1.5em;
 .slider
 {
     position: absolute;
-    height: 25%;
+    height: 32%;
 	max-height: 160px;
     width: 90%;
-    top: 5%;
+    top: 3%;
     left: 0;
     right: 0;
     margin: 0 auto;
