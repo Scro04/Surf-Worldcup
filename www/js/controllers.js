@@ -209,10 +209,177 @@ angular.module('starter.controllers', [])
 
 
 .controller('partyCtrl', function ($scope) {
+	
+	console.log(partyDataSet_[0][6]);
+	$scope.partyData = partyDataSet_;
 
 })
 
 
+.controller('mapCtrl', function ($scope, $state) {
+	var map;
+
+	var current_long;
+	var current_lat;
+	
+	
+
+	$scope.init = function () {
+
+		var MY_MAPTYPE_ID = 'custom_style';
+		
+  var featureOpts = [];
+    
+		var myLatLng = new google.maps.LatLng(47.8632526,16.8338498);
+		var mapOptions = {
+			zoom: 16,
+			disableDefaultUI: true,
+			navigationControl: false,
+    mapTypeControl: false,
+			scrollwheel: false,
+    scaleControl: false,
+    draggable: false,
+			center: myLatLng,
+			 mapTypeControlOptions: {
+      mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
+    },
+    mapTypeId: MY_MAPTYPE_ID
+		};
+		map = new google.maps.Map(document.getElementById('googleMap'), mapOptions);
+		  var styledMapOptions = {
+    name: 'Custom Style'
+  };
+
+  var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);
+
+
+  map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
+
+		
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+//Setting the position of the Glastonbury map marker.
+var markerPositionGlastonbury = new google.maps.LatLng(47.8632526,16.83384984);
+//Setting the icon to be used with the Glastonbury map marker.
+var markerIconGlastonbury = {
+ url: 'img/icon_rockness.png',
+ //The size image file.
+ size: new google.maps.Size(225, 120),
+ //The point on the image to measure the anchor from. 0, 0 is the top left.
+ origin: new google.maps.Point(0, 0),
+ //The x y coordinates of the anchor point on the marker. e.g. If your map marker was a drawing pin then the anchor would be the tip of the pin.
+ anchor: new google.maps.Point(139, 116)
+};
+
+//Setting the shape to be used with the Glastonbury map marker.
+var markerShapeGlastonbury = {
+ coord: [12,4,216,22,212,74,157,70,184,111,125,67,6,56],
+ type: 'poly'
+};
+		
+//Creating the Glastonbury map marker.
+markerGlastonbury = new google.maps.Marker({
+ //uses the position set above.
+ position: markerPositionGlastonbury,
+ //adds the marker to the map.
+ map: map,
+ title: 'Glastonbury Festival',
+ //assigns the icon image set above to the marker.
+ icon: markerIconGlastonbury,
+ //assigns the icon shape set above to the marker.
+ shape: markerShapeGlastonbury,
+ //sets the z-index of the map marker.
+ zIndex:102
+})
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+var oe3marker = new google.maps.LatLng(47.861927, 16.830819);
+//Setting the icon to be used with the Glastonbury map marker.
+var icon_oe3_marker = {
+ url: 'img/oe3mark.png',
+ //The size image file.
+ size: new google.maps.Size(60, 55),
+ //The point on the image to measure the anchor from. 0, 0 is the top left.
+ origin: new google.maps.Point(0, 0),
+ //The x y coordinates of the anchor point on the marker. e.g. If your map marker was a drawing pin then the anchor would be the tip of the pin.
+ anchor: new google.maps.Point(0, 46)
+};
+
+	
+//Creating the Glastonbury map marker.
+oe3mark = new google.maps.Marker({
+ //uses the position set above.
+ position: oe3marker,
+ //adds the marker to the map.
+ map: map,
+ title: 'Glastonbury Festival',
+ //assigns the icon image set above to the marker.
+ icon: icon_oe3_marker,
+ //assigns the icon shape set above to the marker.
+ //sets the z-index of the map marker.
+ zIndex:102
+})
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+var heinekenmarker = new google.maps.LatLng(47.861927, 16.830819);
+//Setting the icon to be used with the Glastonbury map marker.
+var icon_heineken_marker = {
+ url: 'img/heineken_marker.png',
+ //The size image file.
+ size: new google.maps.Size(90, 85),
+ //The point on the image to measure the anchor from. 0, 0 is the top left.
+ origin: new google.maps.Point(0, 0),
+ //The x y coordinates of the anchor point on the marker. e.g. If your map marker was a drawing pin then the anchor would be the tip of the pin.
+ anchor: new google.maps.Point(-100, 116)
+};
+
+	
+//Creating the Glastonbury map marker.
+hmark = new google.maps.Marker({
+ //uses the position set above.
+ position: heinekenmarker,
+ //adds the marker to the map.
+ map: map,
+ title: 'Glastonbury Festival',
+ //assigns the icon image set above to the marker.
+ icon: icon_heineken_marker,
+ //assigns the icon shape set above to the marker.
+ //sets the z-index of the map marker.
+ zIndex:102
+})
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+var bacardimarker = new google.maps.LatLng(47.861927, 16.830819);
+//Setting the icon to be used with the Glastonbury map marker.
+var icon_bacardi_marker = {
+ url: 'img/bacardi_marker.png',
+ //The size image file.
+ size: new google.maps.Size(80, 80),
+ //The point on the image to measure the anchor from. 0, 0 is the top left.
+ origin: new google.maps.Point(0, 0),
+ //The x y coordinates of the anchor point on the marker. e.g. If your map marker was a drawing pin then the anchor would be the tip of the pin.
+ anchor: new google.maps.Point(-100, 266)
+};
+
+	
+//Creating the Glastonbury map marker.
+bacmark = new google.maps.Marker({
+ //uses the position set above.
+ position: bacardimarker,
+ //adds the marker to the map.
+ map: map,
+ title: 'Glastonbury Festival',
+ //assigns the icon image set above to the marker.
+ icon: icon_bacardi_marker,
+ //assigns the icon shape set above to the marker.
+ //sets the z-index of the map marker.
+ zIndex:102
+})
+	
+}
+
+	
+})
 .controller('sideOE3Ctrl', function ($scope) {
 
 

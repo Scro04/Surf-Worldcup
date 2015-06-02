@@ -7,7 +7,7 @@ riderDataSet_ = [];
 bewerbeDataSet_ = [];
 programmDataSet_ = [];
 sideEventsDataSet_ = [];
-	
+partyDataSet_ = [];
 	
 //-----------------------------------------------------------------------------	
 //------------------------------LOAD RIDERS DATA-------------------------------
@@ -70,7 +70,22 @@ $.ajax({
 	}
 });
 //-----------------------------------------------------------------------------	
-	
+//---------------------------LOAD PARTY EVENTS DATA-----------------------------
+
+$.ajax({
+	type: "GET",
+	url: "php/getPartys.php",
+	dataType: "json",
+	success: function (data) {
+		partyDataSet_ = data;
+		console.log(partyDataSet_);
+	},
+	error: function (result) {
+		loadPartysJSON();
+	}
+});
+//-----------------------------------------------------------------------------	
+
 	
 //-----------------------------LOAD RIDER FROM JSON----------------------------
 function loadRiderJSON()
@@ -141,5 +156,15 @@ function loadSideEventJSON()
 	  });
 }
 
+//-----------------------------LOAD SIDE EVENT JSON----------------------------
+function loadPartysJSON()
+{
+	for(var x = 0; x < programmDataSet_.length; x++)
+	{
+		partyDataSet_.push(programmDataSet_[x]);
+						   }
+}
+
+	
 	
 });
