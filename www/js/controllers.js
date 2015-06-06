@@ -215,6 +215,17 @@ angular.module('starter.controllers', [])
 
 })
 
+.controller('sponsorsCtrl', function ($scope, $window) {
+	
+	$scope.sponsorDataSet = sponsorsDataSet_;
+	
+	
+	$scope.openUrl = function(item) {
+            var ref = $window.open(item, '_system', 'location=yes');
+        };
+	
+	
+})
 
 .controller('mapCtrl', function ($scope, $state) {
 	var map;
@@ -601,6 +612,7 @@ bacmark = new google.maps.Marker({
     }
   }*/
 })
+
 
 function appController($scope, $ionicSideMenuDelegate) {
     $scope.toggleLeftSideMenu = function () {

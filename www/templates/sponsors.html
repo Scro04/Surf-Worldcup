@@ -1,6 +1,19 @@
-<!-- Sponsors page!  -->
-<ion-content>
-<h1>Sponsors</h1>
+<link href="css/style.css" rel="stylesheet">
+<ion-view title="Sponsoren">
+<ion-content id="main_content" has-header="true" has-footer="true" padding="true">
 
+ <div class="list">
 
+        <a class="item item-avatar" ng-repeat="item in sponsorDataSet track by $index" 
+           href="#" ng-click="openUrl('{{ item[2] }}')">
+
+			<img ng-src="{{ item[3] }}" class="image_border">
+            <h2 id="party_list_design">{{ item[1] }}</h2>
+      		<p>{{ item[4] }}</p>
+
+	  </a>
+
+</div>
+  
 </ion-content>
+</ion-view>
