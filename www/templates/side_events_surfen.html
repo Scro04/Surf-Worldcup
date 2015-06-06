@@ -5,6 +5,19 @@
 
 
 <ion-content id="main_content" has-header="true" has-footer="true" padding="true">
-    <button class="button icon-right ion-chevron-right">Surfen</button>
-    </ion-content>
+    <button class="button" ng-click="showInfo(1)" id="btnSurf">Surfen</button>
+    <button class="button" id="btnPaddle" ng-click="showInfo(2)">Stand-Up Paddling</button>
+    <button class="button" id="btnPit" ng-click="showInfo(3)">Pit Walk</button>
+    <button class="button" id="btnBeach" ng-click="showInfo(4)">Beach Games</button>
+    <button class="button" id="btnPlay" ng-click="showInfo(5)">Playground</button>
+    <button class="button" id="btnKids" ng-click="showInfo(6)">Kids Area</button>
+    
+    <div class="popUpdiv" style="display:none" id="divContainer">
+    <span id="divTitle"></span>
+    <p id="divText"></p>
+    <a ng-click="showInfo('divClose')">Close</a>
+    </div>
+                    
+    </div>
+</ion-content>
 </ion-view>

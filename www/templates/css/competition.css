@@ -1,11 +1,13 @@
+
+
 .card {
     opacity: 0.96;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 5%;
 	margin-bottom: 5%;
- 
 }
+
 
 .item.item-divider{
     text-align: center;
@@ -44,13 +46,12 @@ font-size: 1em;}
 }
 
 #rider_button {
-	background: blue;
+	background: gray;
     font-size: 30px;
     color: white;
+
     margin-left: 5%;
-    margin-top: 5%;
-    height: 5%;
-    width: 90%;
+    width: 42%;
     
 }
 #rider{
@@ -62,13 +63,11 @@ font-size: 1em;}
 }
 
 #program_button {
-	background: blue;
+	background: gray;
     font-size: 30px;
     color: white;
-    margin-left: 5%;
-    margin-top: 5%;
-    height: 5%;
-    width: 90%;
+    margin-right: 5%;
+    width: 42%;
     
 }
 #program{
@@ -78,4 +77,37 @@ font-size: 1em;}
   margin-top: 1%;
   opacity: 0.96; 
 }
+
+
+#monat {
+  font-size: 100%;
+  
+  
+}
+
+a {
+    color: #0254EB
+}
+a:visited {
+    color: #0254EB
+}
+a.morelink {
+    text-decoration:none;
+    outline: none;
+}
+.morecontent span {
+    display: none;
+}
+.comment {
+    width: 400px;
+    margin: 10px;
+}
+
+.floated {
+   float:left;
+   margin-right:5px;
+}
+
+
+
 

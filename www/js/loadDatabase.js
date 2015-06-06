@@ -7,7 +7,8 @@ riderDataSet_ = [];
 bewerbeDataSet_ = [];
 programmDataSet_ = [];
 sideEventsDataSet_ = [];
-	
+partyDataSet_ = [];
+sponsorsDataSet_ = [];
 	
 //-----------------------------------------------------------------------------	
 //------------------------------LOAD RIDERS DATA-------------------------------
@@ -70,7 +71,38 @@ $.ajax({
 	}
 });
 //-----------------------------------------------------------------------------	
-	
+//---------------------------LOAD PARTY EVENTS DATA-----------------------------
+
+$.ajax({
+	type: "GET",
+	url: "php/getPartys.php",
+	dataType: "json",
+	success: function (data) {
+		partyDataSet_ = data;
+		console.log(partyDataSet_);
+	},
+	error: function (result) {
+		loadPartysJSON();
+	}
+});
+
+//-----------------------------------------------------------------------------	
+//------------------------------LOAD SPONSORS DATA-----------------------------
+
+$.ajax({
+	type: "GET",
+	url: "php/getSponsors.php",
+	dataType: "json",
+	success: function (data) {
+		sponsorsDataSet_ = data;
+		console.log(sponsorsDataSet_);
+	},
+	error: function (result) {
+		loadSponsorsJSON();
+	}
+});
+//-----------------------------------------------------------------------------	
+
 	
 //-----------------------------LOAD RIDER FROM JSON----------------------------
 function loadRiderJSON()
@@ -141,5 +173,32 @@ function loadSideEventJSON()
 	  });
 }
 
+//-----------------------------LOAD PARTY EVENT JSON----------------------------
+function loadPartysJSON()
+{
+	for(var x = 0; x < programmDataSet_.length; x++)
+	{
+		partyDataSet_.push(programmDataSet_[x]);
+						   }
+}
+
+	//-----------------------------LOAD SIDE EVENT JSON----------------------------
+function loadSponsorsJSON()
+{
+	$.ajax({
+		type: "GET",
+		url: "json/Sponsors.json",
+		dataType: "json",
+		success: function (data) {
+			for(var x = 0; x < data.length; x++)
+				sponsorsDataSet_.push($.map(data[x], function(el) { return el; }));
+			console.log(sponsorsDataSet_);		
+		},
+		error: function (result) {
+			console.log(result);
+		}
+	  });
+}
+	
 	
 });
