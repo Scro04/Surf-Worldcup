@@ -1,10 +1,10 @@
-.content_home {
+#main_content {
     position: fixed;
-    background-image: url(../../img/8722167302_9511b81630_o.jpg);
+    background-image: url(../../img/back2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 100%;
+    height: auto;
     width: auto;
 
 }
@@ -12,128 +12,4 @@
 .bar-light {
  z-index: 999;   
 }
-.slider
-{
-    position: relative;
-    height: 25%;
-    width: 90%;
-    top: 5%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    z-index: 100;}
 
-#content
-{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0 auto;
-}
-
-.box
-{
-    position: absolute;
-    display: block;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-}
-
-.box img
-{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    display: block;
-}
-
-.slider-pager
-{
-    z-index: 999;
-}
-
-.slider-pager-page
-{
-    width: 10px;
-    font-size: 10px;
-}
-
-.card-image {
-    margin-top: -10px;
-}
-
-#timeline {
-    box-sizing: initial;
-    color: black;
-    margin-bottom: 10px;
-    border-left: 3px solid #FFC107 ;
-    padding-left: 10px;
-    width: 70vw;
-}
-
-.upcomingcard {}
-
-.indexeventheader {
-    font-size: 1.2em;
-}
-
-.toallevents {
-    bottom: 20px;
-}
-
-.eventcontent {
-    font-size: 0.8em;
-    margin-top: 5px;
-}
-
-.timelinetime {
-    margin-left: -18px;
-    background-color: #f5f5f5;
-    float: left;
-}
-
-.card-content {}
-
-.mapimage {
-    width: 60vw;
-    float: left;
-}
-
-.extendarrow {
-    float: left;
-    width: 70vw;
-    padding-right: 10vw;
-    text-align: center;
-    padding-left: auto;
-    padding-right: auto;
-}
-
-
-
-.img-fade-in {
-    display: inherit;
-    max-height: auto;
-}
-.mapmarker{
-position: absolute;
-}
-.mapwrapper{
-
-}
-
-.row {
-
-    padding-top: 15%;
-    opacity: 0.96;
-
-    
-}
-.mainnavview
-{
- margin-top: 8%;
-}

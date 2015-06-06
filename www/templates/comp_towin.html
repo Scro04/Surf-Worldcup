@@ -1,15 +1,9 @@
 <link href="templates/css/competition.css" rel="stylesheet">
+<ion-content class="main_content" has-header="true" has-footer="true" padding="true">
 
-<ion-content class="content_comp">
-  <ion-tabs class="tabs-positive">
-      <ion-tab title="Team" ui-sref="team"></ion-tab>
-      <ion-tab title="PWA"  ui-sref="pwa"></ion-tab>
-      <ion-tab title="TOW-IN EM" ui-sref="towin"></ion-tab>
-  </ion-tabs>
-  
 <div class="card">
   <div class="item item-divider">
-    TOW-IN EM
+    Beschreibung
   </div>
   
   <div class="item item-text-wrap">
@@ -26,50 +20,40 @@ Zuerst werden in 3 Gruppen die besten 10 Rider für das Finale ermittelt. Dieses
   </div>
 </div>
 
-  
+<div class="card">
+  <div class="item item-divider">
+    Time Table
+  </div>
 
-<table>
-  <tr>
-    <th class="day-name">Sun</th>
-    <th class="day-name">Mon</th>
-    <th class="day-name">Tue</th>
-    <th class="day-name">Wed</th>
-    <th class="day-name">Thu</th>
-    <th class="day-name">Fri</th>
-    <th class="day-name">Sat</th>
-  </tr>
-  <tr>
-    <td class="day"><span class="number">31</span></td>
-    <td class="day"><span class="number">1</span><span class="event"></span><span class="event"></span></td>
-    <td class="day"><span class="number">2</span></td>
-    <td class="day"><span class="number">3</span><span class="event event-multiday-start"></span></td>
-    <td class="day"><span class="number">4</span>
-      <span class="event event-multiday"></span>
-      <span class="event event-multiday-start eventclass" style="background-color:#5a9ab2;"></span>
-      <span class="event"></td>
-    <td class="day"><span class="number">5</span><span class="event event-multiday-finish"></span><span class="event event-multiday eventclass" style="background-color:#5a9ab2;"></span></td>
-    <td class="day"><span class="number">6</span><span class="event event-ghost"></span><span class="event event-multiday-finish eventclass" style="background-color:#5a9ab2;"></span></td>
-  </tr>
-  <tr>
-    <td class="day"><span class="number">21</span></td>
-    <td class="day"><span class="number">22</span></td>
-    <td class="day"><span class="number">23</span></td>
-    <td class="day"><span class="number">24</span></td>
-    <td class="day"><span class="number">25</span></td>
-    <td class="day"><span class="number">26</span></td>
-    <td class="day"><span class="number">27</span><span class="event event-multiday-start" style="background-color:#da5f5f;"></td>
-  </tr>
-  <tr>
-    <td class="day"><span class="number">28</span><span class="event event-multiday" style="background-color:#da5f5f;"></td>
-    <td class="day today"><span class="number">29</span><span class="event event-multiday-finish" style="background-color:#da5f5f;"></td>
-    <td class="day"><span class="number">30</span></td>
-    <td class="day"><span class="number">1</span></td>
-    <td class="day"><span class="number">2</span></td>
-    <td class="day"><span class="number">3</span></td>
-    <td class="day"><span class="number">4</span></td>
-  </tr>
-</table>  
-  
-  
-  
+  <div class="item item-text-wrap">
+  <table id="table" class="upeventstable">
+    <tr class="header_table">
+      <td>Datum</td>
+      <td>von</td>
+      <td>bis</td>
+      <td>Beschreibung</td>
+    </tr>
+    <tr id="event0">
+      <td id="date0">30.04. </td>
+      <td id="start_time0">20:00</td><td id="end_time0">21:00</td>
+      <td id="name0">CHIEMSEE Tow-In EM</td>
+    </tr>
+    <tr id="event1">
+      <td id="date1">01.05. </td>
+      <td id="start_time1">17:00</td><td id="end_time1">18:00</td>
+      <td id="name1">CHIEMSEE Tow-In EM</td>
+    </tr>
+    <tr id="event2">
+      <td id="date2">02.05. </td>
+      <td id="start_time2">17:00</td><td id="end_time2">18:00</td>
+      <td id="name2">CHIEMSEE Tow-In EM</td>
+    </tr>
+    <tr id="event3">
+      <td id="date3">03.05. </td>
+      <td id="start_time3">15:00</td><td id="end_time3">16:00</td>
+      <td id="name3">CHIEMSEE Tow-In EM, FINALE</td>
+    </tr>
+  </table>
+  </div>
+</div>
 </ion-content>

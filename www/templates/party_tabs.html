@@ -1,0 +1,20 @@
+<link href="templates/css/competition.css" rel="stylesheet">
+<link href="templates/css/party.css" rel="stylesheet">
+<ion-view title="Partys">
+<ion-content id="main_content" has-header="true" has-footer="true" padding="true">
+
+ <div class="list">
+
+        <a ng-repeat="item in partyData track by $index" 
+           href="#/"
+           class="item item-thumbnail-left" >
+
+			<img ng-src="{{ item[6] }}" class="image_border">
+          <h2 id="party_list_design">{{ item[4] }}</h2>
+			<h3><span id="date" class="icon ion-calendar">   {{ item[1] }}</span><br> <span id="date" class="icon ion-clock"> {{ item[2] }} - {{item[3]}}</span><br><span id="date" class="button button-full button-light" ui-sref="map"> Auf der Karte anzeigen
+				</span></h3>
+	  </a>
+      </div>
+  
+</ion-content>
+</ion-view>
