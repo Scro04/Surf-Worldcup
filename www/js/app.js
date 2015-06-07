@@ -99,6 +99,12 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 	  templateUrl: 'templates/map.html',
       controller: 'mapCtrl'
   })
+  
+    .state('anfahrt', {
+	  url: '/anfahrt',
+	  templateUrl: 'templates/anfahrt.html',
+      controller: 'anfahrtCtrl'
+  })
 	  
   // SideEvents States
   .state('sideEvents', {

@@ -17,9 +17,15 @@ h3 {
 #date {
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
+
 }
 
-
+#map_icon {
+position: absolute;
+	left: 90%;
+	font-size: 22px;
+	top:35px;
+}
 
 
 .date_icon {

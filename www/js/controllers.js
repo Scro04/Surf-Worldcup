@@ -208,11 +208,148 @@ angular.module('starter.controllers', [])
 })
 
 
+.controller('anfahrtCtrl', function ($scope) {
+
+	  var directionsDisplay;
+    var directionsService = new google.maps.DirectionsService();
+    var map;
+
+    var current_long;
+    var current_lat;
+
+    $scope.init = function () {
+        directionsDisplay = new google.maps.DirectionsRenderer();
+        var myLatLng = new google.maps.LatLng(47.8632526,16.83384984);
+        var mapOptions = {
+            zoom: 16,
+            center: myLatLng
+        };
+        map = new google.maps.Map(document.getElementById('googleMap'), mapOptions);
+        directionsDisplay.setMap(map);
+
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Hello World!'
+        });
+    }
+
+    // Try W3C Geolocation (Preferred)
+    if (navigator.geolocation) {
+        browserSupportFlag = true;
+        navigator.geolocation.getCurrentPosition(function (position) {
+            initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+            current_lat = position.coords.latitude;
+            current_long = position.coords.longitude;
+        }, function () {
+            handleNoGeolocation(browserSupportFlag);
+        });
+    }
+    // Browser doesn't support Geolocation
+    else {
+        browserSupportFlag = false;
+        handleNoGeolocation(browserSupportFlag);
+    }
+
+    $scope.calcRoute = function () {
+        console.log("calc");
+        var request = {
+            origin: new google.maps.LatLng(current_lat, current_long),
+            destination: new google.maps.LatLng(47.8632526,16.83384984),
+            travelMode: google.maps.TravelMode.DRIVING
+        };
+        directionsService.route(request, function (response, status) {
+            if (status == google.maps.DirectionsStatus.OK) {
+                directionsDisplay.setPanel(document.getElementById("googleMap"));
+                directionsDisplay.setDirections(response);
+            }
+        });
+    }
+
+    function handleNoGeolocation(errorFlag) {
+        if (errorFlag == true) {
+
+            initialLocation = new google.maps.LatLng(47.078598, 15.450715);
+        } else {
+            initialLocation = siberia;
+        }
+        map.setCenter(initialLocation);
+    }
+
+
+})
+
+
 .controller('partyCtrl', function ($scope) {
 	
-	console.log(partyDataSet_[0][6]);
-	$scope.partyData = partyDataSet_;
+	$scope.partyData = partyDataSet_;	
 
+    function isEventStored(ref) {
+        var index = 0;
+        for (var x = 0; x < storedEvents.length; x++) {
+            if (storedEvents[x] == ref) {
+                index = 1;
+				console.log("event already stored");
+            }
+        }
+        return index;
+    }
+
+	
+     $scope.changeButton = function(data) {
+        var index = isEventStored(data);	
+		 setTimeout(function(){ 
+			 console.log(data);
+       if (!index) {
+            var btn = document.getElementById(data);
+            btn.removeAttribute("class");
+            btn.removeAttribute("id");
+            document.getElementById("added" + data).innerHTML = "Zu meinen Events hinzuf&uuml;gen";
+            btn.setAttribute("class", "button button-block button-outline button-positive");
+            btn.setAttribute("id", data);
+        } else {
+			console.log("changeeee");
+            var btn = document.getElementById(data);
+            document.getElementById("added" + data).innerHTML = "Hinzugef&uuml;gt";
+            btn.removeAttribute("class");
+            btn.removeAttribute("id");
+            btn.setAttribute("class", "button button-block button-balanced icon ion-checkmark");
+            btn.setAttribute("id", data);
+        }
+							   }, 100);
+
+    }
+
+	
+    $scope.setParticipation = function (index) {
+        if (isEventStored(index)) {
+
+            for (var x = 0; x < storedEvents.length; x++) {
+                if (storedEvents[x] == index) {
+                    storedEvents.splice(x, 1);
+                }
+            }
+            localStorage.clear();
+            localStorage.setItem("myEvents", JSON.stringify(storedEvents));
+            $scope.changeButton(index);
+        } else {
+            var inList = false;
+            for (var x = 0; x < storedEvents.length; x++) {
+                if (storedEvents[x] == index) {
+                    inList = true;
+                }
+            }
+
+            if (!inList) {
+                console.log("Adding");
+                storedEvents.push(index);
+                localStorage.clear();
+                localStorage.setItem("myEvents", JSON.stringify(storedEvents));
+            }
+            $scope.changeButton(index);
+        }
+
+    }
 })
 
 .controller('sponsorsCtrl', function ($scope, $window) {
@@ -232,7 +369,6 @@ angular.module('starter.controllers', [])
 
 	var current_long;
 	var current_lat;
-	
 	
 
 	$scope.init = function () {
@@ -256,7 +392,7 @@ angular.module('starter.controllers', [])
     },
     mapTypeId: MY_MAPTYPE_ID
 		};
-		map = new google.maps.Map(document.getElementById('googleMap'), mapOptions);
+		map = new google.maps.Map(document.getElementById('googleMap2'), mapOptions);
 		  var styledMapOptions = {
     name: 'Custom Style'
   };

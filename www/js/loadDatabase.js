@@ -82,7 +82,7 @@ $.ajax({
 		console.log(partyDataSet_);
 	},
 	error: function (result) {
-		loadPartysJSON();
+		
 	}
 });
 
@@ -148,7 +148,9 @@ function loadProgramJSON()
 		success: function (data) {
 			for(var x = 0; x < data.length; x++)
 				programmDataSet_.push($.map(data[x], function(el) { return el; }));
-			console.log(programmDataSet_);		
+			console.log(programmDataSet_);	
+
+			loadPartysJSON()
 		},
 		error: function (result) {
 			console.log(result);
@@ -178,8 +180,11 @@ function loadPartysJSON()
 {
 	for(var x = 0; x < programmDataSet_.length; x++)
 	{
-		partyDataSet_.push(programmDataSet_[x]);
+		if(programmDataSet_[x][5] == 5)
+			partyDataSet_.push(programmDataSet_[x]);
 						   }
+	
+	console.log(partyDataSet_);
 }
 
 	//-----------------------------LOAD SIDE EVENT JSON----------------------------

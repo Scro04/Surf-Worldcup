@@ -34,6 +34,24 @@
     <script src="js/controllers.js"></script>
 	<script type="text/javascript" src="js/data.js"></script>
 	
+	
+		
+<script type="text/javascript">
+var storedEvents = [];	
+</script>
+	
+	
+
+<script>
+	$( document ).ready(function() {	
+		if(JSON.parse(localStorage.getItem("myEvents")) != null)
+		{
+			storedEvents = JSON.parse(localStorage.getItem("myEvents"));
+			console.log(storedEvents);
+		}
+		
+	});
+	</script>
 
 </head>
 
@@ -77,8 +95,11 @@
                          <ion-item nav-clear menu-close href="#/sideEvents">
                             Side Events
                         </ion-item>
-			    <ion-item nav-clear menu-close href="#/map">
+			   			<ion-item nav-clear menu-close href="#/map">
                             Map
+                        </ion-item>
+			   			<ion-item nav-clear menu-close href="#/anfahrt">
+                            Anfahrt
                         </ion-item>
                     </ion-list>
           </ion-content>
