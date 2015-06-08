@@ -169,3 +169,81 @@ width:100%;
   margin-bottom: 4%;
   font-size: 16px;
 }
+
+/*------------------------------- FOOD --------------------*/
+
+#btnBurger {
+    font-size: 20px;
+    color: white;
+    background-image: url(../../img/Burger.png);
+    background-size: 100% 100%;
+    margin-left: 0.5%;
+    margin-top: 6.5%;
+    height: 27%;
+    width: 47.5%;
+    border-radius: 5px;
+}
+
+#btnPizza {
+    font-size: 20px;
+    color: white;
+    background-image: url(../../img/Pizza.png);
+    background-size: 100% 100%;
+    margin-left: 1.5%;
+    margin-top: 6.5%;
+    height: 27%;
+    width: 48%;
+    line-height: 25px;
+    border-radius: 5px;
+}
+
+#btnKost {
+   font-size: 20px;
+    color: white;
+    line-height: 25px;
+    background-image: url(../../img/schnitzel.png);
+    background-size: 100% 100%;
+    margin-left: 0.5%;
+    margin-top: 6.5%;
+    height: 27%;
+    width: 47.5%;
+    border-radius: 5px;
+}
+
+#btnBier {
+    font-size: 20px;
+    color: white;
+    background-image: url(../../img/Bier.png);
+    background-size: 100% 100%;
+    margin-left: 1.5%;
+    margin-top: 6.5%;
+    height: 27%;
+    width: 48%;
+    border-radius: 5px;
+}
+
+#btnCocktail {
+    font-size: 20px;
+    color: white;
+    line-height: 25px;
+    background-image: url(../../img/cocktail.png);
+    background-size: 100% 100%;
+    margin-left: 0.5%;
+    margin-top: 6.5%;
+    height: 27%;
+    width: 47.5%;
+    border-radius: 5px;
+}
+
+#btnAlkFrei {
+    font-size: 20px;
+    color: white;
+    line-height: 25px;
+    background-image: url(../../img/softdrink.png);
+    background-size: 100% 100%;
+    margin-left: 1.5%;
+    margin-top: 6.5%;
+    height: 27%;
+    width: 48%;
+    border-radius: 5px;
+}

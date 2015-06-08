@@ -115,74 +115,98 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('sideEventsCtrl', function ($scope) {   
+.controller('sideEventsCtrl', function ($scope) { 
+    
+    $scope.data = [];
   
-    $scope.surf = ["Gratis Windsurf Kurse!", "Auch in diesem Jahr gibt es natürlich wieder die Gratis Surfkurse von De Silva Windresort Kalpitiya für alle, die mal in den Windsurfsport hineinschnuppern möchten."];
+    var surf = ["Gratis Windsurf Kurse!", "Auch in diesem Jahr gibt es natürlich wieder die Gratis Surfkurse von De Silva Windresort Kalpitiya für alle, die mal in den Windsurfsport hineinschnuppern möchten."];
     
-    $scope.paddle = ["Joya Stand-Up Paddling!", "Die momentan am schnellsten wachsende Wassersportart bieten den perfekten Einstieg in den Windsurfsport. Der größte Stand Up Paddling Test mit den besten Marken der Welt, wo insgesamt 80 Boards zum Testen zur Verfügung stehen, wartet heuer in Podersdorf auf alle, die in das Surf-Feeling hineinschnuppern wollen. Einfach draufstellen, lospaddeln oder für die ganz Mutigen: Die Teilnahme an einem SUPstacles-Rennen, wo man mit dem SUP-Board Hindernisse am Wasser meistern muss."];
+    $scope.data.push(surf);
     
-    $scope.pit = ["Surfer Pit Walk!", "Der 'Pit Walk' kehrt zurück an den Neusiedler See: Die Top 8 Rider präsentieren sich im neu gestalteten Fahrerlager publikumsnahe wie selten zuvor: Die cool ausgestatteten Kojen bestaunen, Autogramme von den Besten der Welt holen, fachsimplen mit den Pros der Szene - da schlagen sowohl Mädchen- als auch Surferherzen höher."];
+    var paddle = ["Joya Stand-Up Paddling!", "Die momentan am schnellsten wachsende Wassersportart bieten den perfekten Einstieg in den Windsurfsport. Der größte Stand Up Paddling Test mit den besten Marken der Welt, wo insgesamt 80 Boards zum Testen zur Verfügung stehen, wartet heuer in Podersdorf auf alle, die in das Surf-Feeling hineinschnuppern wollen. Einfach draufstellen, lospaddeln oder für die ganz Mutigen: Die Teilnahme an einem SUPstacles-Rennen, wo man mit dem SUP-Board Hindernisse am Wasser meistern muss."];
     
-    $scope.beach = ["Beach Summer Games!", "Die Area der Beach Summer Games steht auch heuer wieder ganz im Zeichen des Ballsports. Die höchste Turnierklasse des Volleyballsports macht von 24. bis 26. April Halt und bietet die Möglichkeit sich direkt bei den Profis was abzuschauen. Natürlich kann auch vor Ort selber bei einem Schnuppertraining mitgemacht oder einfach so auf einem Platz gespielt werden. Die TimeOut Beachcamps mit professionellen Trainingseinheiten und Betreuung finden wieder an den Wochenenden statt - Anmeldung im Vorfeld hier oder nach Verfügbarkeit auch noch vor Ort möglich."];
+    $scope.data.push(paddle);
     
-    $scope.play = ["Skating Playground!", "Die Area to be für alle Skater! Der Treffpunkt am Mittelpunkt des Geländes ist der Traum für alle mit Scooter, Skateboard, Longboard, etc. Obstacles für Tricks, Shows und Contests über den Tag verteilt sorgen für reges Treiben in der Area."];
+    var pit = ["Surfer Pit Walk!", "Der 'Pit Walk' kehrt zurück an den Neusiedler See: Die Top 8 Rider präsentieren sich im neu gestalteten Fahrerlager publikumsnahe wie selten zuvor: Die cool ausgestatteten Kojen bestaunen, Autogramme von den Besten der Welt holen, fachsimplen mit den Pros der Szene - da schlagen sowohl Mädchen- als auch Surferherzen höher."];
     
-    $scope.kids = ["Burgendland/Sportunion Kids Area!", "Die Sportunion Burgenland bringt die Kids zum Sport! Heuer wieder mit dabei: Ihre Airtrack Bahn, Mega-Zorbs (Riesenbälle aus Plastik), Discgolf, Bassalo, ..."];
+    $scope.data.push(pit);
     
-    $scope.showInfo = function(value) 
+    var beach = ["Beach Summer Games!", "Die Area der Beach Summer Games steht auch heuer wieder ganz im Zeichen des Ballsports. Die höchste Turnierklasse des Volleyballsports macht von 24. bis 26. April Halt und bietet die Möglichkeit sich direkt bei den Profis was abzuschauen. Natürlich kann auch vor Ort selber bei einem Schnuppertraining mitgemacht oder einfach so auf einem Platz gespielt werden. Die TimeOut Beachcamps mit professionellen Trainingseinheiten und Betreuung finden wieder an den Wochenenden statt - Anmeldung im Vorfeld hier oder nach Verfügbarkeit auch noch vor Ort möglich."];
+    
+    $scope.data.push(beach);
+    
+    var play = ["Skating Playground!", "Die Area to be für alle Skater! Der Treffpunkt am Mittelpunkt des Geländes ist der Traum für alle mit Scooter, Skateboard, Longboard, etc. Obstacles für Tricks, Shows und Contests über den Tag verteilt sorgen für reges Treiben in der Area."];
+    
+    $scope.data.push(play);
+    
+    var kids = ["Burgendland/Sportunion Kids Area!", "Die Sportunion Burgenland bringt die Kids zum Sport! Heuer wieder mit dabei: Ihre Airtrack Bahn, Mega-Zorbs (Riesenbälle aus Plastik), Discgolf, Bassalo, ..."];
+    
+    $scope.data.push(kids);
+    
+     var burger = ["Saftige Surf Burger!", "Lassen Sie sich uns von unseren Grillmeistern verwöhnen und genießen Sie den legendären, einzigartigen Surf-Burger. Nur echt beim Surfworldcup!"];
+     
+    $scope.data.push(burger);
+    
+    var pizza = ["Knusprige Pizza!", "Pizza - der beliebeste mediterrane Snack Österreichs ist natürlich auch bei uns in Podersdorf am Start - stellvertretend für die mediaterrane Kochkunst. Des weiteren gibt es für Feinschmecker Nudelboxen und Döner Kebap. Buon appetito!"];
+     
+    $scope.data.push(pizza);
+    
+      var kost = ["Echt österreichische Hausmannskost!", "Egal ob Wiener Schnitzel, eine herzhafte Käsekrainer oder Schinkenfleckerl - auch die traditionelle österreichische Küche ist ein Fixpunkt in unserem kulinarischen Programm."];
+     
+    $scope.data.push(kost);
+    
+    var bier = ["Kühles Bier!", "Ein kühles Blondes bitte! Unser Partner Heineken kommt diesem Wunsch gerne nach und bringt wieder alles rund um das beste Erfrischungsgetränk der Welt mit zum Surf-Opening. Hier muss keiner durstig nach Hause gehen"];
+     
+    $scope.data.push(bier);
+    
+    var cocktail = ["Coole Cocktails!", "Sex on the Beach, Caipirinha, Cuba Libre, ... sie alle und noch mehr sind an unseren Cocktailbars erhältlich. Was gibt es schöneres als den Tag bei Sonnenuntergang mit einem Cocktail ausklingen zu lassen?"];
+     
+    $scope.data.push(cocktail);
+    
+    var softdrink = ["Alkoholfreie Getränke!", "Auch alle Anti-Alkoholiker und Autofahrer kommen bei uns auf ihre Kosten. Unsere Getränkepartner bringen von Cola über Eistee bishin zu natürlichem Wasser alles was das Herz begehrt."];
+     
+    $scope.data.push(softdrink);
+    
+    
+    
+    
+    $scope.showInfo = function(value, screen) 
     {
-        var blanket = document.getElementById("divContainer");
-        var tmp_div = document.getElementById("divTitle");
-        var tmp_div2 = document.getElementById("divText");
+        var blanket;
+        var tmp_div;
+        var tmp_div2;
         
-        
-        if(blanket.style.display == "none")
+        if(screen == 1)
         {
-            blanket.style.display = "block";
-        }
-        
-        switch(value)
-        {
-           case 1:
-             
-             tmp_div.innerHTML = $scope.surf[0];
-             tmp_div2.innerHTML = $scope.surf[1];
-             break;
-                
-           case 2:
-             
-             tmp_div.innerHTML = $scope.paddle[0];
-             tmp_div2.innerHTML = $scope.paddle[1];
-             break;
-                
-          case 3:
-             
-             tmp_div.innerHTML = $scope.pit[0];
-             tmp_div2.innerHTML = $scope.pit[1];
-             break;
-        
-          case 4:
-             
-             tmp_div.innerHTML = $scope.beach[0];
-             tmp_div2.innerHTML = $scope.beach[1];
-             break;
-                
-        case 5:
+            blanket = document.getElementById("divContainer");
+            tmp_div = document.getElementById("divTitle");
+            tmp_div2 = document.getElementById("divText");
             
-             tmp_div.innerHTML = $scope.play[0];
-             tmp_div2.innerHTML = $scope.play[1];
-             break;
-                
-        case 6:
-             
-             tmp_div.innerHTML = $scope.kids[0];
-             tmp_div2.innerHTML = $scope.kids[1];
-             break;
-                
-        default:
-            blanket.style.display = "none";     
-    
         }
+        else if(screen == 2)
+        {
+            blanket = document.getElementById("divContainer2");
+            tmp_div = document.getElementById("divTitle2");
+            tmp_div2 = document.getElementById("divText2");
+        }
+        
+        
+        if(value <= 100)
+        {
+            if(blanket.style.display == "none")
+            {
+                blanket.style.display = "block";
+            }
+            
+        tmp_div.innerHTML = $scope.data[value][0];
+        tmp_div2.innerHTML = $scope.data[value][1];
+        }
+        else
+        {
+            blanket.style.display = "none";
+        }
+       
+                
     }
 
 })
