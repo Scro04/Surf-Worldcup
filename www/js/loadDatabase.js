@@ -82,7 +82,7 @@ $.ajax({
 		console.log(partyDataSet_);
 	},
 	error: function (result) {
-		
+		console.log("error");
 	}
 });
 
