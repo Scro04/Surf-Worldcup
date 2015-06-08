@@ -1,8 +1,37 @@
 <link href="templates/css/home.css" rel="stylesheet">
+<script type="text/javascript" src="js/flipclock.js"></script>
 
 <ion-view title="Home">
 <ion-content id="main_content" scroll="false">
 
+    <div class="clock" style="margin:2em; top: 5%; position:absolute; font-size:5px; width: 100%; "></div>
+		
+	<div class="message"></div>
+		
+ 	<script type="text/javascript">
+	var clock;
+
+			$(document).ready(function() {
+
+				// Grab the current date
+				var currentDate = new Date();
+
+				// Set some date in the future. In this case, it's always Jan 1
+				var futureDate  = new Date(currentDate.getFullYear() + 0, 6, 4);
+
+				// Calculate the difference in seconds between the future and current date
+				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+				// Instantiate a coutdown FlipClock
+				clock = $('.clock').FlipClock(diff, {
+					clockFace: 'DailyCounter',
+					countdown: true,
+					showSeconds: false
+				});
+			});
+	</script>
+    
+    
     <ion-slide-box does-continue="true" auto-play="true" on-slide-changed="slideHasChanged($index)">
         <ion-slide>
             <div class="box"><img id="image0">
@@ -26,6 +55,10 @@
         </ion-slide>
     </ion-slide-box>
 
+
 <iframe controls="controls" src="https://www.youtube.com/embed/vgjwVGDIyi0" type="video" autoplay="autoplay" frameborder="0" class="videoPlayer"></iframe>
+
+	
+
 </ion-content>
 </ion-view>

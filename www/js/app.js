@@ -61,7 +61,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       views: {
         'pwa': {
           templateUrl: "templates/comp_pwa.html",
-          controller: 'pwaCtrl'
+          controller: 'compCtrl'
         }
       }
   })
@@ -90,6 +90,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       url: '/party',
       templateUrl: 'templates/party_tabs.html',
 	  controller: 'partyCtrl'
+    })
+  
+
+       // Party States
+  .state('myevents', {
+      url: '/myevents',
+      templateUrl: 'templates/myevents.html',
+	  controller: 'eventsCtrl'
     })
   
 
