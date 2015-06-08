@@ -33,7 +33,7 @@ font-size: 1.5em;
     height: 32%;
 	max-height: 160px;
     width: 90%;
-    top: 3%;
+    bottom: 46%;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -154,4 +154,15 @@ position: absolute;
 .mainnavview
 {
  margin-top: 10%;
+}
+
+.videoPlayer
+{
+    position: absolute;
+    bottom: 3%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 40%;
+    width: 90%;
 }

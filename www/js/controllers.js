@@ -167,8 +167,21 @@ angular.module('starter.controllers', [])
      
     $scope.data.push(softdrink);
     
+     var action = ["Action ohne Ende!", "Für alle denen die Surf-Contests am Wasser noch nicht genug Action bieten, haben wir auch heuer wieder unsere legendäre Action-Shows im Programm. Eine Flugshow von Hannes Arch, eine Trial-Bike Show von Tom Öhler oder ein Feuerwerk? Das alles und noch mehr gibts zu bestaunen - be surprised!"];
+     
+    $scope.data.push(action);
     
+    var geschick = ["Was geht denn hier ab?", "Unsere Geschicklichkeitskünstler zeigen auch heuer wieder warum Sie die besten ihres Fachs sind. Lassen Sie sich in eine andere Welt entführen, die ohne Schwerkraft auszukommen scheint. Dog Dancing, Parcour und Slack-Line sind nur einige der Highlights die auf Sie warten"];
+     
+    $scope.data.push(geschick);
     
+     var oe3 = ["Ö3 Seebühne mit DJ Lounge!", "Die perfekte musikalische Begleitung für den Tag am See kommt von Ö3-DJ Christian Prates. Mal fetzig-mitreißend, dann wieder chillig-entspannt - die Ö3-Seebühne ist der Mittelpunkt des Geländes."];
+     
+    $scope.data.push(oe3);
+    
+    var sundown = ["Sundowner Deluxe!", "Jeden Tag von 19 bis 21 Uhr. Feine Beats, atemberaubender Sonnenuntergang, coole Drinks - das heißt Ibiza-Feeling pur."];
+     
+    $scope.data.push(sundown);
     
     $scope.showInfo = function(value, screen) 
     {
@@ -189,7 +202,12 @@ angular.module('starter.controllers', [])
             tmp_div = document.getElementById("divTitle2");
             tmp_div2 = document.getElementById("divText2");
         }
-        
+        else if(screen == 3)
+        {
+            blanket = document.getElementById("divContainer3");
+            tmp_div = document.getElementById("divTitle3");
+            tmp_div2 = document.getElementById("divText3");
+        }
         
         if(value <= 100)
         {

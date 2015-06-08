@@ -4,22 +4,15 @@
 <ion-view title="Side Events">
 
 <ion-content id="main_content" has-header="true" has-footer="true" padding="true">
-
-    <div class="list">
-        <div class="item item-divider">
-            <h2>Ö3 Seebühne</h2>
-        </div>
-        <div id="list_item" class="item">
-            <span>Ö3 DJ-Lounge</span>
-            <div id="text">Die perfekte musikalische Begleitung für den Tag am See kommt von Ö3-DJ Christian Prates. Mal fetzig-mitreißend, dann wieder chillig-entspannt - die Ö3-Seebühne ist der Mittelpunkt des Geländes.
-            </div>
-        </div>
-        <div id="list_item" class="item">
-            <span>Sundowner Deluxe</span>
-            <div id="text">Jeden Tag von 19 bis 21 Uhr - feine Beats, atemberaubender Sonnenuntergang heißt Ibiza-Feeling pur.
-            </div>
-        </div>
-
-    </div>
+    <button class="button" id="btnAction" ng-click="showInfo(12, 3)">Action</button>
+    <button class="button" id="btnGeschick" ng-click="showInfo(13, 3)">Geschick</button>
+    <button class="button" id="btnOe3" ng-click="showInfo(14, 3)">Ö3-Seebühne</button>
+    <button class="button" id="btnSun" ng-click="showInfo(15, 3)">Sundowner</button>
+    
+     <div class="popUpdiv" style="display:none" id="divContainer3">
+    <span id="divTitle3"></span>
+    <p id="divText3"></p>
+    <a ng-click="showInfo(9999, 3)">Close</a>
+    
 </ion-content>
 </ion-view>

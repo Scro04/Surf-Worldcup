@@ -247,3 +247,55 @@ width:100%;
     width: 48%;
     border-radius: 5px;
 }
+
+/*--------------------------- Shows ---------------------------------------- */
+
+#btnAction {
+    font-size: 20px;
+    color: white;
+    background-image: url(../../img/action.png);
+    background-size: 100% 100%;
+    margin-left: 0.5%;
+    margin-top: 6.5%;
+    height: 27%;
+    width: 47.5%;
+    border-radius: 5px;
+}
+
+#btnGeschick {
+    font-size: 20px;
+    color: white;
+    background-image: url(../../img/geschick.png);
+    background-size: 100% 100%;
+    margin-left: 1.5%;
+    margin-top: 6.5%;
+    height: 27%;
+    width: 48%;
+    line-height: 25px;
+    border-radius: 5px;
+}
+
+#btnOe3 {
+   font-size: 20px;
+    color: white;
+    line-height: 25px;
+    background-image: url(../../img/oe3.png);
+    background-size: 100% 100%;
+    margin-left: 0.5%;
+    margin-top: 6.5%;
+    height: 27%;
+    width: 47.5%;
+    border-radius: 5px;
+}
+
+#btnSun {
+    font-size: 20px;
+    color: white;
+    background-image: url(../../img/sundown.png);
+    background-size: 100% 100%;
+    margin-left: 1.5%;
+    margin-top: 6.5%;
+    height: 27%;
+    width: 48%;
+    border-radius: 5px;
+}
