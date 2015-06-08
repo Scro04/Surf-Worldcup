@@ -61,7 +61,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       views: {
         'pwa': {
           templateUrl: "templates/comp_pwa.html",
-          controller: 'pwaCtrl'
+          controller: 'compCtrl'
         }
       }
   })
