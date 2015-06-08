@@ -1,4 +1,5 @@
 <link href="templates/css/home.css" rel="stylesheet">
+<script type="text/javascript" src="js/flipclock.js"></script>
 
 <ion-view title="Home">
 <ion-content id="main_content" scroll="false">
@@ -26,57 +27,32 @@
         </ion-slide>
     </ion-slide-box>
 
+	<div class="clock" style="margin:2em; top: 75%; position:absolute; font-size:5px; width: 100%; "></div>
+		
+	<div class="message"></div>
+		
+ 	<script type="text/javascript">
+	var clock;
 
-    <div class="row">
-        <div class="col s12 m6">
-            <div class="card grey lighten-4">
-                <div class="card-content black-text upcomingcard " style="padding-top: 1vh;">
-                    <!--<span class="card-title black-text">Upcoming Events</span>-->
-                    <div id="timeline">
-                        <div id="firstevent">
-                            <i class="mdi-device-access-time timelinetime grey-text darken-2"></i>
-                            <p class="black-text darken-2" id="event1_time">10.30</p>
-                            <p class="indexeventheader" id="event1_title">Kitesurf Team Contest</p>
-                            <p class="eventcontent grey-text" id="event1_descr">Erlebe den spannenden Wettkampf zwischen den besten Teams der Welt.</p>
-                            <i class="mdi-hardware-keyboard-arrow-down extendarrow" ng-click="openmap(1)"></i>
-                            <div class="mapwrapper">
-                                <img class="mapimage " id="map1" src="img/map.jpg">
-                                <i class="mdi-maps-place mapmarker"></i>
+			$(document).ready(function() {
 
-                            </div>
-							 </div>
-                            <div id="firstevent">
-                                <i class="mdi-device-access-time timelinetime grey-text darken-2"></i>
-                                <p class="black-text darken-2" id="event2_time">22.30"</p>
-                                <p class="indexeventheader" id="event2_title">Opening Party</p>
-                                <p class="eventcontent grey-text" id="event2_descr">Das Event, dass uns in diese Woche starten l&aumlst.</p>
-                                <i class="mdi-hardware-keyboard-arrow-down extendarrow" ng-click="openmap(2)"></i>
-                                <div class="mapwrapper">
-                                    <img class="mapimage " id="map2" src="img/map.jpg">
-                                    <i class="mdi-maps-place mapmarker"></i>
+				// Grab the current date
+				var currentDate = new Date();
 
-                                </div>
- </div>
-                                <div id="firstevent">
-                                    <i class="mdi-device-access-time timelinetime grey-text darken-2"></i>
-                                    <p class="black-text darken-2"id="event3_time">22.30</p>
-                                    <p class="indexeventheader" id="event3_title">Opening Party</p>
-                                    <p class="eventcontent grey-text" id="event3_descr">Das Event, dass uns in diese Woche starten l&aumlst.</p>
-                                    <i class="mdi-hardware-keyboard-arrow-down extendarrow" ng-click="openmap(3)"></i>
-                                    <div class="mapwrapper">
-                                        <img class="mapimage " id="map3" src="img/map.jpg">
-                                        <i class="mdi-maps-place mapmarker"></i>
-                                    </div>
-                                </div>
-							
-	
-                            </div>
-                       
-                    </div>
-                </div>
-            </div>
-    </div>
+				// Set some date in the future. In this case, it's always Jan 1
+				var futureDate  = new Date(currentDate.getFullYear() + 0, 6, 4);
 
+				// Calculate the difference in seconds between the future and current date
+				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+				// Instantiate a coutdown FlipClock
+				clock = $('.clock').FlipClock(diff, {
+					clockFace: 'DailyCounter',
+					countdown: true,
+					showSeconds: false
+				});
+			});
+	</script>
 
 </ion-content>
 </ion-view>

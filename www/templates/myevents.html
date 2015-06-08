@@ -1,11 +1,14 @@
 <link href="templates/css/competition.css" rel="stylesheet">
 <link href="templates/css/party.css" rel="stylesheet">
-<ion-view title="Partys">
+
+<ion-view title="Meine Events">
 <ion-content id="main_content" has-header="true" has-footer="true" padding="true">
+
+ 
 
  <div class="list">
 
-        <div ng-repeat="item in partyData track by $index" 
+        <div ng-repeat="item in events track by $index" 
            href="#/"
            class="item item-thumbnail-left">
 
@@ -13,13 +16,11 @@
           <h2 id="party_list_design">{{ item[4] }}</h2>
 			<h3><span id="date" class="icon ion-calendar">   {{ item[1] }}</span><br> <span id="date" class="icon ion-clock"> {{ item[2] }} - {{item[3]}}</span><br><span id="map_icon" class="icon ion-map" ui-sref="map">
 				</span>
-			
-			<button ng-attr-id="{{item[0]}}" ng-click="setParticipation({{item[0]}})" class="button button-block button-outline button-positive" ng-init="changeButton(item[0])" >
-            <span ng-attr-id="added{{item[0]}}">Zu meinen Events hinzufügen</span>
-            </button>
+
 			</h3>
 	  </div>
       </div>
- 
+	
+
 </ion-content>
 </ion-view>
