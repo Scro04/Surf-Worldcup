@@ -93,6 +93,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     })
   
 
+       // Party States
+  .state('myevents', {
+      url: '/myevents',
+      templateUrl: 'templates/myevents.html',
+	  controller: 'eventsCtrl'
+    })
+  
+
     
   	.state('map', {
 	  url: '/map',

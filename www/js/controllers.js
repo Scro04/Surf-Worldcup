@@ -231,6 +231,24 @@ angular.module('starter.controllers', [])
 
 })
 
+.controller('eventsCtrl', function ($scope) {
+
+	var data = [];
+	for(var x = 0; x < storedEvents.length; x++)
+	{
+		for(var y = 0; y < programmDataSet_.length; y++)
+		{
+			console.log(programmDataSet_[y][0]);
+			if(programmDataSet_[y][0] == storedEvents[x])
+				data.push(programmDataSet_[y]);
+		}
+	}
+	console.log(data);
+	
+	$scope.events = data;
+
+})
+
 
 .controller('anfahrtCtrl', function ($scope) {
 
@@ -282,11 +300,10 @@ angular.module('starter.controllers', [])
             destination: new google.maps.LatLng(47.8632526,16.83384984),
             travelMode: google.maps.TravelMode.DRIVING
         };
-        directionsService.route(request, function (response, status) {
-            if (status == google.maps.DirectionsStatus.OK) {
-                directionsDisplay.setPanel(document.getElementById("googleMap"));
-                directionsDisplay.setDirections(response);
-            }
+         directionsService.route(request, function(response, status) {
+    if (status == google.maps.DirectionsStatus.OK) {
+      directionsDisplay.setDirections(response);
+    }
         });
     }
 
@@ -323,7 +340,6 @@ angular.module('starter.controllers', [])
      $scope.changeButton = function(data) {
         var index = isEventStored(data);	
 		 setTimeout(function(){ 
-			 console.log(data);
        if (!index) {
             var btn = document.getElementById(data);
             btn.removeAttribute("class");
