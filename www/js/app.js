@@ -84,6 +84,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
+  
 
      // Party States
   .state('party', {
