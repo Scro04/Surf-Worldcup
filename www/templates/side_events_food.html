@@ -9,20 +9,17 @@
 
 <ion-content  id="main_content" has-header="true" has-footer="true" padding="true">
     
-    <div class="list">
-        <div class="item item-divider">
-            <h2>Food + Drinks</h2>
-    </div>
-        <div id="list_item" class="item">
-            <span>Abwechslungsreiche Gastro</span>
-            <div id="text">Genieße Spezialitäten aus aller Welt: Die legendären Surf-Burger, gschmackiger Kebap, feine Crepes, Steinofen-Pizza und bodenständigen Gerichte wie Schinkenfleckerl oder Käsekrainer - für jeden Geschmack ist das richtige dabei.
-            </div>
-        </div>
-        <div id="list_item" class="item">
-            <span>Coole Drinks</span>
-            <div id="text">Egal ob Bier, Cocktail oder alkoholfreie Getränke: Lehn dich zurück und genieße deine kühlen Drinks auf 100 Strandliegen und 300 Liegestühle!
-            </div>
-        </div>
-    </div>
+    <button class="button" id="btnBurger" ng-click="showInfo(6, 2)">Surf-Burger</button>
+    <button class="button" id="btnPizza" ng-click="showInfo(7, 2)">Pizza</button>
+    <button class="button" id="btnKost" ng-click="showInfo(8, 2)">Heimische Kost</button>
+    <button class="button" id="btnBier" ng-click="showInfo(9, 2)">Bier</button>
+    <button class="button" id="btnCocktail" ng-click="showInfo(10, 2)">Coole Cocktails</button>
+    <button class="button" id="btnAlkFrei" ng-click="showInfo(11, 2)">Alkoholfreie Getränke</button>
+    
+     <div class="popUpdiv" style="display:none" id="divContainer2">
+    <span id="divTitle2"></span>
+    <p id="divText2"></p>
+    <a ng-click="showInfo(9999, 2)">Close</a>
+
 </ion-content>
 </ion-view>

@@ -61,7 +61,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       views: {
         'pwa': {
           templateUrl: "templates/comp_pwa.html",
-          controller: 'pwaCtrl'
+          controller: 'compCtrl'
         }
       }
   })
@@ -93,11 +93,25 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     })
   
 
+       // Party States
+  .state('myevents', {
+      url: '/myevents',
+      templateUrl: 'templates/myevents.html',
+	  controller: 'eventsCtrl'
+    })
+  
+
     
   	.state('map', {
 	  url: '/map',
 	  templateUrl: 'templates/map.html',
       controller: 'mapCtrl'
+  })
+  
+    .state('anfahrt', {
+	  url: '/anfahrt',
+	  templateUrl: 'templates/anfahrt.html',
+      controller: 'anfahrtCtrl'
   })
 	  
   // SideEvents States

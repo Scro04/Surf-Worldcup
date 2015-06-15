@@ -1,9 +1,40 @@
 <link href="templates/css/home.css" rel="stylesheet">
+<script type="text/javascript" src="js/flipclock.js"></script>
 
 <ion-view title="Home">
 <ion-content id="main_content" scroll="false">
 
-    <ion-slide-box on-slide-changed="slideHasChanged($index)">
+    <div class="clock"></div>
+		
+	<div class="message"></div>
+    
+    <div class="text"><span>... bis zum größten Event des Jahres!</span></div>
+		
+ 	<script type="text/javascript">
+	var clock;
+
+			$(document).ready(function() {
+
+				// Grab the current date
+				var currentDate = new Date();
+
+				// Set some date in the future. In this case, it's always Jan 1
+				var futureDate  = new Date(currentDate.getFullYear() + 0, 6, 4);
+
+				// Calculate the difference in seconds between the future and current date
+				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+				// Instantiate a coutdown FlipClock
+				clock = $('.clock').FlipClock(diff, {
+					clockFace: 'DailyCounter',
+					countdown: true,
+					showSeconds: false
+				});
+			});
+	</script>
+    
+    
+    <ion-slide-box does-continue="true" auto-play="true" on-slide-changed="slideHasChanged($index)">
         <ion-slide>
             <div class="box"><img id="image0">
             </div>
@@ -27,56 +58,12 @@
     </ion-slide-box>
 
 
-    <div class="row">
-        <div class="col s12 m6">
-            <div class="card grey lighten-4">
-                <div class="card-content black-text upcomingcard " style="padding-top: 1vh;">
-                    <!--<span class="card-title black-text">Upcoming Events</span>-->
-                    <div id="timeline">
-                        <div id="firstevent">
-                            <i class="mdi-device-access-time timelinetime grey-text darken-2"></i>
-                            <p class="black-text darken-2" id="event1_time">10.30</p>
-                            <p class="indexeventheader" id="event1_title">Kitesurf Team Contest</p>
-                            <p class="eventcontent grey-text" id="event1_descr">Erlebe den spannenden Wettkampf zwischen den besten Teams der Welt.</p>
-                            <i class="mdi-hardware-keyboard-arrow-down extendarrow" ng-click="openmap(1)"></i>
-                            <div class="mapwrapper">
-                                <img class="mapimage " id="map1" src="img/map.jpg">
-                                <i class="mdi-maps-place mapmarker"></i>
+    
+    
+    
+<!--<iframe controls="controls" src="https://www.youtube.com/embed/vgjwVGDIyi0" type="video" autoplay="autoplay" frameborder="0" class="videoPlayer"></iframe>-->
 
-                            </div>
-							 </div>
-                            <div id="firstevent">
-                                <i class="mdi-device-access-time timelinetime grey-text darken-2"></i>
-                                <p class="black-text darken-2" id="event2_time">22.30"</p>
-                                <p class="indexeventheader" id="event2_title">Opening Party</p>
-                                <p class="eventcontent grey-text" id="event2_descr">Das Event, dass uns in diese Woche starten l&aumlst.</p>
-                                <i class="mdi-hardware-keyboard-arrow-down extendarrow" ng-click="openmap(2)"></i>
-                                <div class="mapwrapper">
-                                    <img class="mapimage " id="map2" src="img/map.jpg">
-                                    <i class="mdi-maps-place mapmarker"></i>
-
-                                </div>
- </div>
-                                <div id="firstevent">
-                                    <i class="mdi-device-access-time timelinetime grey-text darken-2"></i>
-                                    <p class="black-text darken-2"id="event3_time">22.30</p>
-                                    <p class="indexeventheader" id="event3_title">Opening Party</p>
-                                    <p class="eventcontent grey-text" id="event3_descr">Das Event, dass uns in diese Woche starten l&aumlst.</p>
-                                    <i class="mdi-hardware-keyboard-arrow-down extendarrow" ng-click="openmap(3)"></i>
-                                    <div class="mapwrapper">
-                                        <img class="mapimage " id="map3" src="img/map.jpg">
-                                        <i class="mdi-maps-place mapmarker"></i>
-                                    </div>
-                                </div>
-							
 	
-                            </div>
-                       
-                    </div>
-                </div>
-            </div>
-    </div>
-
 
 </ion-content>
 </ion-view>
