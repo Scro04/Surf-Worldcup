@@ -32,6 +32,10 @@
         <h2>{{item[4]}}</h2>
         <p class="icon ion-clock"> {{item[2]}} - {{item[3]}}</p>
         <p class="icon ion-calendar"> {{item[1]}}</p>
+        <button ng-attr-id="{{item[0]}}" ng-click="setParticipation({{item[0]}})" class="button button-block button-outline button-positive" ng-init="changeButton(item[0])" >
+            <span ng-attr-id="added{{item[0]}}">Zu meinen Events hinzufügen</span>
+            </button>
+        
       </a>
     </div>
 </div>  

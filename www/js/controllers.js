@@ -740,6 +740,78 @@ bacmark = new google.maps.Marker({
       return false;
     });
   });
+  
+  $scope.berwerbeData = bewerbeDataSet_;	
+
+    function isEventStored(ref) {
+        var index = 0;
+        for (var x = 0; x < storedEvents.length; x++) {
+            if (storedEvents[x] == ref) {
+                index = 1;
+				console.log("event already stored");
+            }
+        }
+        return index;
+    }
+
+	
+     $scope.changeButton = function(data) {
+        var index = isEventStored(data);	
+		 setTimeout(function(){ 
+       if (!index) {
+            var btn = document.getElementById(data);
+            btn.removeAttribute("class");
+            btn.removeAttribute("id");
+            document.getElementById("added" + data).innerHTML = "Zu meinen Events hinzuf&uuml;gen";
+            btn.setAttribute("class", "button button-block button-outline button-positive");
+            btn.setAttribute("id", data);
+        } else {
+			console.log("changeeee");
+            var btn = document.getElementById(data);
+            document.getElementById("added" + data).innerHTML = "Hinzugef&uuml;gt";
+            btn.removeAttribute("class");
+            btn.removeAttribute("id");
+            btn.setAttribute("class", "button button-block button-balanced icon ion-checkmark");
+            btn.setAttribute("id", data);
+        }
+         }, 100);
+
+    }
+
+	
+    $scope.setParticipation = function (index) {
+        if (isEventStored(index)) {
+
+            for (var x = 0; x < storedEvents.length; x++) {
+                if (storedEvents[x] == index) {
+                    storedEvents.splice(x, 1);
+                }
+            }
+            localStorage.clear();
+            localStorage.setItem("myEvents", JSON.stringify(storedEvents));
+            $scope.changeButton(index);
+        } else {
+            var inList = false;
+            for (var x = 0; x < storedEvents.length; x++) {
+                if (storedEvents[x] == index) {
+                    inList = true;
+                }
+            }
+
+            if (!inList) {
+                console.log("Adding");
+                storedEvents.push(index);
+                localStorage.clear();
+                localStorage.setItem("myEvents", JSON.stringify(storedEvents));
+            }
+            $scope.changeButton(index);
+        }
+
+    }
+  
+  
+  
+  
 
 })
 
