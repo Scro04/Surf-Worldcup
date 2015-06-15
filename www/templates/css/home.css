@@ -30,10 +30,10 @@ font-size: 1.5em;
 .slider
 {
     position: absolute;
-    height: 32%;
-	max-height: 160px;
+    height: 35%;
+	max-height: 200px;
     width: 90%;
-    bottom: 46%;
+    bottom: 2%;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -165,4 +165,29 @@ position: absolute;
     margin: 0 auto;
     height: 40%;
     width: 90%;
+}
+
+.text
+{
+    position: absolute;
+    top: 28%;
+    height: 30%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    line-height: 45px;
+    background-image: url(../../img/action.png);
+}
+
+.text span
+{
+    left: 5%;
+    right: 5%;
+    top: 25%;
+    margin: 0 auto;
+    position: absolute;
 }

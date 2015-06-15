@@ -53,9 +53,10 @@
 
 .flip-clock-wrapper {
   text-align: center;
-  position: relative;
+  position: absolute;
   width: 100%;
-  margin: 1em;
+  top: 5%;
+  margin-right: -1em;
 }
 
 .flip-clock-wrapper:before,
@@ -174,7 +175,7 @@
 .flip-clock-wrapper ul.play li.flip-clock-before {
   z-index: 3; }
 
-.flip-clock-wrapper .flip {   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); }
+.flip-clock-wrapper .flip {   box-shadow: 0 1.5px 3.5px rgba(0, 0, 0, 0.7); }
 
 .flip-clock-wrapper ul.play li.flip-clock-active {
   -webkit-animation: asd 0.5s 0.5s linear both;
@@ -186,7 +187,7 @@
   float: left;
   display: inline-block;
   position: relative;
-  width: 20px;
+  width: 15px;
   height: 100px; }
 
 .flip-clock-divider:first-child {
@@ -204,11 +205,11 @@
 
 .flip-clock-divider .flip-clock-label {
   position: absolute;
-  top: -1.5em;
+  top: -0.9em;
   right: -86px;
   color: black;
   text-shadow: none;
-	font-size: 4em;}
+	font-size: 2em;}
 
 .flip-clock-divider.minutes .flip-clock-label {
   right: -88px; }
