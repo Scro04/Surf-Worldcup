@@ -27,7 +27,7 @@ Zuerst werden in 3 Gruppen die besten 10 Rider für das Finale ermittelt. Dieses
     
     <div class="rider" id="rider">
       <a ng-repeat="item in riderData track by $index" class="item item-avatar">
-        <img src="img/homer.jpg">
+           <img src={{item[5]}}>
         <h2>{{item[1]}} {{item[2]}}</h2>
         <p>{{item[3]}} | {{item[4]}}</p>
       </a>
